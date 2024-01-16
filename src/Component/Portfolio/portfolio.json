@@ -1,5 +1,87 @@
 [
     {
-        "id": 1
+        "id": 1,
+        "format": "Animation 2D, 3D",
+        "video": "portfolioVideo/agat.mp4",
+        "img": "portfolioPic/agat.png"
+    },
+    {
+        "id": 2,
+        "format": "Information",
+        "video": "portfolioVideo/ajMutq.mp4",
+        "img": "portfolioPic/ajMutq.png"
+    },
+    {
+        "id": 3,
+        "format": "Animation 2D, 3D",
+        "video": "portfolioVideo/vodkaFiltrovka.mp4",
+        "img": "portfolioPic/vodkaFiltrovka.png"
+    },
+    {
+        "id": 4,
+        "format": "Information",
+        "video": "portfolioVideo/gnelAm.mp4",
+        "img": "portfolioPic/gnelAm.png"
+    },
+    {
+        "id": 5,
+        "format": "Imigayin",
+        "video": "portfolioVideo/handmade.mp4",
+        "img": "portfolioPic/handmade.png"
+    },
+    {
+        "id": 6,
+        "format": "Animation 2D, 3D",
+        "video": "portfolioVideo/nagrada.mp4",
+        "img": "portfolioPic/nagrada.png"
+    },
+    {
+        "id": 7,
+        "format": "Animation 2D, 3D",
+        "video": "portfolioVideo/nurWine.mp4",
+        "img": "portfolioPic/nurWine.png"
+    },
+    {
+        "id": 8,
+        "format": "Information",
+        "video": "portfolioVideo/shinararakan.mp4",
+        "img": "portfolioPic/shinararakan.png"
+    },
+    {
+        "id": 9,
+        "format": "Animation 2D, 3D",
+        "video": "portfolioVideo/sas.mp4",
+        "img": "portfolioPic/sas.png"
+    },
+    {
+        "id": 10,
+        "format": "Animation 2D, 3D",
+        "video": "portfolioVideo/sovrano2.mp4",
+        "img": "portfolioPic/sovrano2.png"
+    },
+    {
+        "id": 11,
+        "format": "Animation 2D, 3D",
+        "video": "portfolioVideo/targmanich.mp4",
+        "img": "portfolioPic/targmanich.png"
+    },
+    {
+        "id": 12,
+        "format": "Information",
+        "formatTwo": "Animation 2D, 3D",
+        "video": "portfolioVideo/autocard.mp4",
+        "img": "portfolioPic/autocard.png"
+    },
+    {
+        "id": 13,
+        "format": "Playful",
+        "video": "portfolioVideo/rolikTri.mp4",
+        "img": "portfolioPic/rolikTri.png"
+    },
+    {
+        "id": 14,
+        "format": "Playful",
+        "video": "portfolioVideo/rolikTizer.mp4",
+        "img": "portfolioPic/rolikTizer.png"
     }
 ]
