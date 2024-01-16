@@ -1,0 +1,106 @@
+header{
+    width: 100%;
+    height: 100vh;
+    // padding-bottom: 60px;
+    .headerCont, .headerContTwo{
+        background: url(../../img/backgroundHeader.jpg);
+        background-repeat: no-repeat;
+        background-origin: content-box;
+        background-position: center;
+        background-size: 100%;
+        background-size: cover;
+        background-clip: padding-box;
+        background-attachment: fixed;
+        // width: 100%;
+        height: 100vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        filter: grayscale(50%);
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        div{
+            width: 100%;
+            position: absolute;
+            h2{
+                color: white;
+                // font-size: 6vw;
+                margin-block-end: 0;
+            }
+            h3{
+                color: white;
+            }
+            p{
+                font-size: 100%;
+                color: white;
+                letter-spacing: 5px;
+                width: 70%;
+                margin: 0 auto;
+            }
+        }
+    }
+    .headerContTwo{
+        background-image: url(../../img/website.jpg);
+    }
+    .react-multi-carousel-dot-list {
+        bottom: 10px;
+        .react-multi-carousel-dot {
+            button {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: rgb(155, 153, 153);
+                border: none;
+
+                // &:hover {
+                //     background-color: rgb(41, 41, 176);
+                //     width: 32px;
+                //     border: none;
+                // }
+            }
+        }
+
+        .react-multi-carousel-dot--active {
+
+            button {
+                background-color: rgb(41, 41, 176);
+                background-color: white;
+                width: 13px;
+                height: 13px;
+                padding: 1px 0;
+                border: none;
+                // padding: 5px;
+                // padding: 3px;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 465px) {
+    .headerCont, .headerContTwo{
+        div{
+            width: 100%;
+            position: absolute;
+            h2{
+                color: white;
+                font-size: 6vw;
+                margin-block-end: 0;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 465px) {
+    .headerCont, .headerContTwo{
+        div{
+            width: 100%;
+            position: absolute;
+            h2{
+                color: white;
+                font-size: 20vw;
+                margin-block-end: 0;
+            }
+        }
+    }
+}

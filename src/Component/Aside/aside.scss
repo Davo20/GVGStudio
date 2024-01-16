@@ -1,0 +1,31 @@
+
+aside{
+    div{
+        color: red;
+        // background-color: red;
+        h3{
+            height: 160px;
+          color: #fff;
+          line-height: 160px;
+          text-align: center;
+          background: #364d79;
+        }
+    }
+    .ant-carousel .slick-dots li button{
+        background-color: rgb(109, 103, 103);
+        height: 16px;
+        border-radius: 50%;
+        // button{
+        //     height: 100%;
+        // }
+    }
+    // .ant-carousel .slick-dots li button::after{
+    //     position: absolute;
+    //     content: "";
+    //     height: 32px;
+    // }
+    .ant-carousel .slick-dots li .slick-active{
+        height: 32px;
+        width: 16px;
+    }
+}

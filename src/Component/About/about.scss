@@ -1,0 +1,76 @@
+.aboutUs {
+    width: 100%;
+
+    h2 {
+        font-size: 50px;
+    }
+
+    .aboutHeader {
+        background-image: url(../../img/h.webp);
+        background-repeat: no-repeat;
+        background-origin: content-box;
+        background-size: 100%;
+        background-size: cover;
+        background-attachment: fixed;
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-bottom: 60px;
+
+        div {
+
+            h2 {
+                color: white;
+                margin-block-end: 0;
+                font-size: 50px;
+            }
+
+            div {
+                width: 70%;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-around;
+                a {
+                    text-decoration: none;
+                    color: gray;
+                    &:hover{
+                        color: white;
+                    }
+                }
+
+                span {
+                    color: gray;
+                }
+            }
+        }
+    }
+
+    .aboutCont {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .aboutText {
+            text-align: left;
+        }
+    }
+}
+
+@media only screen and (max-width: 860px) {
+    .aboutCont {
+        flex-direction: column;
+
+        .aboutPic {
+            width: 100%;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

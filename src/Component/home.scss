@@ -1,0 +1,34 @@
+main{
+    max-width: 3000px;
+    width: 100%;
+    background-color: gainsboro;
+    overflow: hidden;
+    position: relative;
+    .sectionName{
+        font-size: 40px;
+    }
+    .fadeUp{
+        position: fixed;
+        width: 40px;
+        height: 40px;
+        background-color: blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        right: -40px;
+        bottom: 50px;
+        transition: 1s;
+        z-index: 2222;
+        cursor: pointer;
+        &.activeArrowUp{
+           right: 40px;
+        }
+        svg{
+            color: white;
+            font-size: 45px;
+        }
+        &:hover{
+            background-color: black;
+        }
+    }
+}

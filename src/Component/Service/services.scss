@@ -1,0 +1,98 @@
+.service {
+    width: 100%;
+    .serviceHeader {
+        background-image: url(../../img/portfolioHeader.jpg);
+        background-repeat: no-repeat;
+        background-origin: content-box;
+        background-size: 100%;
+        background-size: cover;
+        background-attachment: fixed;
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-bottom: 60px;
+        div {
+
+            h2 {
+                color: white;
+                margin-block-end: 0;
+                font-size: 50px;
+            }
+
+            div {
+                width: 70%;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-around;
+                a {
+                    text-decoration: none;
+                    color: gray;
+                    &:hover{
+                        color: white;
+                    }
+                }
+
+                span {
+                    color: gray;
+                }
+            }
+        }
+
+    }
+
+    .serviceCont {
+        width: 95%;
+        height: auto;
+        margin: 0 auto;
+
+        .hh {
+            width: 100%;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+            }
+
+            h2 {
+                color: wheat;
+                z-index: 2;
+            }
+        }
+    }
+
+    .react-multi-carousel-dot-list {
+        .react-multi-carousel-dot {
+            button {
+                width: 20px;
+                height: 8px;
+                border-radius: 10px;
+                border: 1px solid black;
+
+                &:hover {
+                    background-color: rgb(41, 41, 176);
+                    width: 32px;
+                    border: none;
+                }
+            }
+        }
+
+        .react-multi-carousel-dot--active {
+
+            button {
+                background-color: rgb(41, 41, 176);
+                width: 32px;
+                border: none;
+                // padding: 5px;
+                // padding: 3px;
+            }
+        }
+    }
+}

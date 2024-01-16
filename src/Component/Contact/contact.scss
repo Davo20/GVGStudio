@@ -1,0 +1,212 @@
+.contact {
+    width: 100%;
+    background-color: gainsboro;
+
+    // h2 {
+    //     font-size: 50px;
+    //     margin-block-end: 0;
+    // }
+
+    p {
+        color: rgb(117, 116, 116);
+    }
+
+    .contactHeader {
+        background-image: url(../../img/h.webp);
+        background-repeat: no-repeat;
+        background-origin: content-box;
+        background-size: 100%;
+        background-size: cover;
+        background-attachment: fixed;
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-bottom: 60px;
+        div {
+
+            h2 {
+                color: white;
+                margin-block-end: 0;
+                font-size: 50px;
+            }
+
+            div {
+                width: 70%;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-around;
+                a {
+                    text-decoration: none;
+                    color: gray;
+                    &:hover{
+                        color: white;
+                    }
+                }
+
+                span {
+                    color: gray;
+                }
+            }
+        }
+
+        h2 {
+            // position: absolute;
+            color: white;
+            font-size: 50px;
+        }
+    }
+
+    .contactCont {
+        width: 90%;
+        margin: 0 auto;
+        padding-bottom: 50px;
+        h2 {
+            font-size: 50px;
+            margin-block-end: 0;
+        }
+
+        .addres {
+            background-color: white;
+            max-height: 335px;
+            min-height: 317px;
+
+            .addresCont {
+                width: 80%;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                div {
+                    svg {
+                        font-size: 20px;
+                    }
+                }
+
+                ul {
+                    width: 100%;
+                    list-style-type: none;
+                    text-align: left;
+
+                    h2 {
+                        font-size: 20px;
+                        color: black;
+                    }
+
+                    li {
+                        color: rgb(121, 118, 118);
+                    }
+                }
+            }
+
+            .quickConnect {
+                width: 90%;
+                margin: 0 auto;
+
+                h3 {
+                    font-size: 20px;
+                    text-align: left;
+                    margin-left: 13px;
+                }
+
+                ul {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    padding-inline-start: 0;
+                    list-style-type: none;
+
+                    li {
+                        div {
+                            a {
+                                display: flex;
+                                align-items: center;
+                                width: 40px;
+                                height: 40px;
+                                background-color: black;
+                                border-radius: 50%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                cursor: pointer;
+
+                                svg {
+                                    color: white;
+                                    transition: 0.5s;
+                                    font-size: 20px;
+                                }
+
+                                &:hover svg {
+                                    color: #1F75FE;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .message {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            min-height: 250px;
+
+            form {
+                width: 70%;
+                // margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+
+                input,
+                textarea {
+                    display: block;
+                    width: 70%;
+                    max-width: 70%;
+                    min-width: 70%;
+                    height: 30px;
+                    outline: none;
+                    border: none;
+                    border: 1px solid black;
+                    padding: 0 10px;
+                    // &:focus{
+                    //     padding: 5px;
+                    // }
+                }
+
+                button {
+                    width: auto;
+                    height: 30px;
+                    cursor: pointer;
+                    outline: none;
+                    border: none;
+                    background-color: rgb(28, 28, 194);
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 860px) {
+    .contactCont {
+        display: grid;
+        grid-template-columns: 30% calc(70% - 20px);
+        gap: 20px;
+    }
+}
+
+@media only screen and (max-width: 860px) {
+    .contactCont {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+}
