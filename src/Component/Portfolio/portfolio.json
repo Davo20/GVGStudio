@@ -1,85 +1,172 @@
 [
     {
         "id": 1,
-        "format": "Animation 2D, 3D",
-        "video": "portfolioVideo/agat.mp4",
-        "img": "portfolioPic/agat.png"
+        "format": "Imigayin",
+        "video": "https://www.capcut.com/player/7325106863438331905?workspaceId=7325096348355837954",
+        "img": "portfolioPic/batumi.png"
     },
     {
         "id": 2,
-        "format": "Information",
-        "video": "portfolioVideo/ajMutq.mp4",
-        "img": "portfolioPic/ajMutq.png"
+        "format": "Animation 2D, 3D",
+        "video": "https://www.capcut.com/player/7325096952595660802?workspaceId=7325096348355837954",
+        "img": "portfolioPic/agat.png"
     },
     {
         "id": 3,
-        "format": "Animation 2D, 3D",
-        "video": "portfolioVideo/vodkaFiltrovka.mp4",
-        "img": "portfolioPic/vodkaFiltrovka.png"
+        "format": "Information",
+        "video": "https://www.capcut.com/player/7325098400813432834?workspaceId=7325096348355837954",
+        "img": "portfolioPic/ameriaTexnoSamit.png"
     },
     {
         "id": 4,
         "format": "Information",
-        "video": "portfolioVideo/gnelAm.mp4",
-        "img": "portfolioPic/gnelAm.png"
+        "video": "https://www.capcut.com/player/7325102860998557697?workspaceId=7325096348355837954",
+        "img": "portfolioPic/ajMutq.png"
     },
     {
         "id": 5,
-        "format": "Imigayin",
-        "video": "portfolioVideo/handmade.mp4",
-        "img": "portfolioPic/handmade.png"
+        "format": "Animation 2D, 3D",
+        "video": "https://www.capcut.com/player/7325123861433843714?workspaceId=7325096348355837954",
+        "img": "portfolioPic/vodkaFiltrovka.png"
     },
     {
         "id": 6,
-        "format": "Animation 2D, 3D",
-        "video": "portfolioVideo/nagrada.mp4",
-        "img": "portfolioPic/nagrada.png"
+        "format": "Information",
+        "formatTwo": "Animation 2D, 3D",
+        "video": "https://www.capcut.com/player/7325110062224261122?workspaceId=7325096348355837954",
+        "img": "portfolioPic/hubuys.png"
     },
     {
         "id": 7,
-        "format": "Animation 2D, 3D",
-        "video": "portfolioVideo/nurWine.mp4",
-        "img": "portfolioPic/nurWine.png"
+        "format": "Events",
+        "video": "https://www.capcut.com/player/7325104743225868289?workspaceId=7325096348355837954",
+        "img": "portfolioPic/artik.png"
     },
     {
         "id": 8,
         "format": "Information",
-        "video": "portfolioVideo/shinararakan.mp4",
-        "img": "portfolioPic/shinararakan.png"
+        "video": "https://www.capcut.com/player/7325116989163307010?workspaceId=7325096348355837954",
+        "img": "portfolioPic/gnelAm.png"
     },
     {
         "id": 9,
-        "format": "Animation 2D, 3D",
-        "video": "portfolioVideo/sas.mp4",
-        "img": "portfolioPic/sas.png"
+        "format": "Events",
+        "video": "https://www.capcut.com/player/7325117337156288513?workspaceId=7325096348355837954",
+        "img": "portfolioPic/gyumriDigi-Teq.png"
     },
     {
         "id": 10,
+        "format": "Imigayin",
+        "video": "https://www.capcut.com/player/7325117988581982209?workspaceId=7325096348355837954",
+        "img": "portfolioPic/litcherRestoran.png"
+    },
+    {
+        "id": 11,
+        "format": "Imigayin",
+        "video": "https://www.capcut.com/player/7325119558346342401?workspaceId=7325096348355837954",
+        "img": "portfolioPic/handmade.png"
+    },
+    {
+        "id": 12,
+        "format": "Animation 2D, 3D",
+        "video": "https://www.capcut.com/player/7325114537378578433?workspaceId=7325096348355837954",
+        "img": "portfolioPic/nagrada.png"
+    },
+    {
+        "id": 13,
+        "format": "Playful",
+        "video": "https://www.capcut.com/player/7325115844533731329?workspaceId=7325096348355837954",
+        "img": "portfolioPic/motoRolik.png"
+    },
+    {
+        "id": 14,
+        "format": "Information",
+        "video": "https://www.capcut.com/player/7325116620370919426?workspaceId=7325096348355837954",
+        "img": "portfolioPic/mariotAmeria.png"
+    },
+    {
+        "id": 15,
+        "format": "Events",
+        "video": "https://www.capcut.com/player/7325118914533376002?workspaceId=7325096348355837954",
+        "img": "portfolioPic/decoreStore.png"
+    },
+    {
+        "id": 16,
+        "format": "Playful",
+        "formatTwo": "Events",
+        "video": "https://www.capcut.com/player/7325121939603881985?workspaceId=7325096348355837954",
+        "img": "portfolioPic/taeqwondo.png"
+    },
+    {
+        "id": 17,
+        "format": "Imigayin",
+        "video": "https://www.capcut.com/player/7325119235259203586?workspaceId=7325096348355837954",
+        "img": "portfolioPic/esHayEm.png"
+    },
+    {
+        "id": 18,
+        "format": "Information",
+        "video": "https://www.capcut.com/player/7325122283104763906?workspaceId=7325096348355837954",
+        "img": "portfolioPic/police.png"
+    },
+    {
+        "id": 19,
+        "format": "Animation 2D, 3D",
+        "video": "https://www.capcut.com/player/7325124462410465282?workspaceId=7325096348355837954",
+        "img": "portfolioPic/nurWine.png"
+    },
+    {
+        "id": 20,
+        "format": "Information",
+        "video": "https://www.capcut.com/player/7325122705517412353?workspaceId=7325096348355837954",
+        "img": "portfolioPic/shinararakan.png"
+    },
+    {
+        "id": 21,
+        "format": "Imigayin",
+        "video": "https://www.capcut.com/player/7325124973474119682?workspaceId=7325096348355837954",
+        "img": "portfolioPic/gazprom.png"
+    },
+    {
+        "id": 22,
+        "format":"Animation 2D, 3D",
+        "formatTwo": "Information",
+        "video": "https://www.capcut.com/player/7325123072867139586?workspaceId=7325096348355837954",
+        "img": "portfolioPic/viposAmeria.png"
+    },
+    {
+        "id": 23,
+        "format": "Animation 2D, 3D",
+        "video": "https://www.capcut.com/player/7325123314127536129?workspaceId=7325096348355837954",
+        "img": "portfolioPic/sas.png"
+    },
+    {
+        "id": 24,
         "format": "Animation 2D, 3D",
         "video": "portfolioVideo/sovrano2.mp4",
         "img": "portfolioPic/sovrano2.png"
     },
     {
-        "id": 11,
+        "id": 25,
         "format": "Animation 2D, 3D",
-        "video": "portfolioVideo/targmanich.mp4",
+        "video": "https://www.capcut.com/player/7325123586711109634?workspaceId=7325096348355837954",
         "img": "portfolioPic/targmanich.png"
     },
     {
-        "id": 12,
+        "id": 26,
         "format": "Information",
         "formatTwo": "Animation 2D, 3D",
-        "video": "portfolioVideo/autocard.mp4",
+        "video": "https://www.capcut.com/player/7325113469483925506?workspaceId=7325096348355837954",
         "img": "portfolioPic/autocard.png"
     },
     {
-        "id": 13,
+        "id": 27,
         "format": "Playful",
         "video": "portfolioVideo/rolikTri.mp4",
         "img": "portfolioPic/rolikTri.png"
     },
     {
-        "id": 14,
+        "id": 28,
         "format": "Playful",
         "video": "portfolioVideo/rolikTizer.mp4",
         "img": "portfolioPic/rolikTizer.png"

@@ -1,5 +1,5 @@
 import "./portfolio.scss";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { CiPlay1 } from "react-icons/ci";
 import { AiOutlineClose } from "react-icons/ai";
 import portfolioData from "./portfolio.json"
@@ -11,6 +11,7 @@ export default function Portfolio({ selectLanguage, language }) {
     const [readMore, setReadMore] = useState(6)
     const [allProduct, setAllProduct] = useState([])
     const [filterPortfolio, setFilterPortfolio] = useState([...portfolioData])
+    const video = useRef(null)
     let filterWork = ["All", "Imigayin", "Information", "Animation 2D, 3D", "Playful", "Events", "Startup"]
 
     const watchVideoClick = (e) => {
@@ -38,7 +39,18 @@ export default function Portfolio({ selectLanguage, language }) {
             setAllProduct([value]);
         }
     }
-    console.log(filterPortfolio)
+
+    useEffect(() => {
+        document.addEventListener("mousedown", handleOutsideClick);
+        return () => {
+          document.removeEventListener("mousedown", handleOutsideClick);
+        };
+      }, []);
+      const handleOutsideClick = (e) => {
+        if (video.current && video.current.contains(e.target)) {
+           setVideoOpen(false);
+        }
+      };
 
     return (
         <div className="abouCont">
@@ -65,17 +77,13 @@ export default function Portfolio({ selectLanguage, language }) {
                     </div>
                 })}
             </div>
-            {videoOpen && <div className="videoOpen">
-                <div className="c">
-                    <AiOutlineClose onClick={() => setVideoOpen(false)}></AiOutlineClose>
+            {videoOpen && <div ref={video} className="videoOpen">
 
-                    <video controls autoplay>
-                        <source src={d} type="video/mp4"></source>
-                    </video>
-                </div>
-
+                <iframe  className="videoOpen" allow="fullscreen" src={d}  frameborder="0"  ></iframe>
             </div>}
+            
             {readMore < filterPortfolio.length ? <button onClick={readMoreClick} className="loadMore">Read More</button> : null}
         </div>
+        
     )
 }

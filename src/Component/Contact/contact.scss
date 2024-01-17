@@ -176,9 +176,13 @@
                     border: none;
                     border: 1px solid black;
                     padding: 0 10px;
+                    border-radius: 5px;
                     // &:focus{
                     //     padding: 5px;
                     // }
+                }
+                textarea{
+                    height: 100px;
                 }
 
                 button {
