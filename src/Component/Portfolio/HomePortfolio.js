@@ -4,6 +4,8 @@ import { CiPlay1 } from "react-icons/ci";
 import { AiOutlineClose } from "react-icons/ai";
 import portfolioData from "./portfolio.json"
 import { Parallax } from 'react-scroll-parallax';
+import ReactPlayer from 'react-player'
+
 
 export default function Portfolio({ selectLanguage, language }) {
     const [videoOpen, setVideoOpen] = useState(false)
@@ -78,8 +80,8 @@ export default function Portfolio({ selectLanguage, language }) {
                 })}
             </div>
             {videoOpen && <div ref={video} className="videoOpen">
-
-                <iframe  className="videoOpen" allow="fullscreen" src={d}  frameborder="0"  ></iframe>
+                <iframe allow="fullscreen;autoplay" width="640" height="360"  src={d}></iframe>
+                {/* <ReactPlayer url='https://drive.google.com/file/d/1yoC3h41DPHwkZSTrrwoPqGUiB8EWjcZi/view?usp=sharing' /> */}
             </div>}
             
             {readMore < filterPortfolio.length ? <button onClick={readMoreClick} className="loadMore">Read More</button> : null}

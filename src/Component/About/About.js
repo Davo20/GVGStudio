@@ -21,10 +21,7 @@ export default function About({ selectLanguage, language }) {
                         </div>
                     })}
                 </div>
-                {selectLanguage[language].map((lang) => {
-                    return <h2 data-aos="zoom-out">{lang.aboutUs}</h2>
-                })}
-                <HomeAbout></HomeAbout>
+                <HomeAbout selectLanguage={selectLanguage} language={language}></HomeAbout>
             </section>
             <Footer selectLanguage={selectLanguage} language={language}></Footer>
         </div>

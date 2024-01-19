@@ -31,7 +31,7 @@ export default function Burger({ languageClick, language, selectLanguage, menuBu
                         </div>
                         <div className="menuLink">
                             <Link to="/team" onClick={()=>setMenuBurger(false)}>
-                                <li>{lang.team}</li>
+                                <li>{lang.clients}</li>
                             </Link>
                         </div>
                         <div className="menuLink">

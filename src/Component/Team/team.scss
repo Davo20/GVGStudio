@@ -1,9 +1,12 @@
+$titleColor: #4B4B73;
 .team {
     width: 100%;
-    background-color: gainsboro;
+    // background-color: gainsboro;
+    background-color: white;
 
     h2 {
-        font-size: 50px;
+        font-size: 40px;
+        text-transform: uppercase;
     }
 
     .teamHeader {
@@ -52,6 +55,27 @@
     .teamCont {
         width: 90%;
         margin: 0 auto;
+        .react-multi-carousel-dot-list {
+            display: none;
+        }
+        .slider{
+            margin: 0 auto;
+        }
+        h2{
+            color: $titleColor;
+        }
+        .logoCollaborator{
+            height: 200px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 50%;
+                height: auto;
+                max-height: 50%;
+            }
+        }
 
         .card {
             .animationCard {
@@ -92,11 +116,11 @@
     }
 }
 @media only screen and (min-width: 860px) {
-    .teamCont {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
-    }
+    // .teamCont {
+    //     display: grid;
+    //     grid-template-columns: repeat(1, 1fr);
+    //     gap: 20px;
+    // }
 }
 // TABLETS SCREEN
 @media only screen and (max-width: 860px) {

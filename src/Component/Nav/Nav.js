@@ -5,9 +5,10 @@ import { CiPlay1 } from "react-icons/ci";
 import { BsPlayFill, BsPlay } from "react-icons/bs";
 import { FiMenu } from "react-icons/fi";
 import { MdOutlineClose } from "react-icons/md";
-import logo from "../../img/logo4.png";
+// import logo from "../../img/logo4.png";
 import { Outlet, Link } from "react-router-dom";
 import { Select } from 'antd';
+import logo from "../../img/logo++.png"
 import "./nav.scss";
 // import { useState } from "react";
 
@@ -32,8 +33,9 @@ export default function Nav({ languageClick, language, selectLanguage }) {
             <div className="navCont">
                 <div className="logo">
                     {/* <img src={logo}></img> */}
-                    <span>STUDIO</span>
-                    <span>GVG</span>
+                    {/* <span>STUDIO</span>
+                    <span>GVG</span> */}
+                    <img src={logo}></img>
                 </div>
 
                 <div className="navBarMenu">
@@ -52,7 +54,7 @@ export default function Nav({ languageClick, language, selectLanguage }) {
                                 <li>{lang.portfolio}</li>
                             </Link>
                             <Link to="/team">
-                                <li>{lang.team}</li>
+                                <li>{lang.clients}</li>
                             </Link>
                             <Link to="/contact">
                                 <li>{lang.contact}</li>

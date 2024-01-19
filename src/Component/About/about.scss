@@ -13,7 +13,7 @@
         background-size: cover;
         background-attachment: fixed;
         width: 100%;
-        height: 90vh;
+        height: 80vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -52,11 +52,15 @@
         width: 90%;
         margin: 0 auto;
         display: flex;
+        justify-content: space-around;
         align-items: center;
-        gap: 10px;
+        gap: 40px;
 
         .aboutText {
             text-align: left;
+            p{
+                line-height: 30px;
+            }
         }
     }
 }

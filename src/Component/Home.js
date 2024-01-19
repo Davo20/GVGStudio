@@ -59,7 +59,7 @@ export default function Home({ selectLanguage, language }) {
                 {selectLanguage[language].map((lang, index) => {
                     return <h2 key={index} className="sectionName" data-aos="zoom-out">{lang.aboutUs}</h2>
                 })}
-                <HomeAbout></HomeAbout>
+                <HomeAbout selectLanguage={selectLanguage} language={language}></HomeAbout>
             </section>
             {/* SERVICES */}
             <section className="service">
@@ -141,7 +141,7 @@ export default function Home({ selectLanguage, language }) {
             <section className="contact">
                 {selectLanguage[language].map((lang, index) => {
                     return <div key={index}>
-                        <h2 className="sectionName" data-aos="zoom-out">{lang.contact}</h2>
+                        <h2 className="sectionName" data-aos="zoom-out">{lang.contactUs}</h2>
                         <p data-aos="zoom-out">{lang.contactAbout}</p>
                     </div>
                 })}

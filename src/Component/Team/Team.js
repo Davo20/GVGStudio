@@ -13,16 +13,16 @@ export default function Team({ selectLanguage, language }) {
                 <div className="teamHeader">
                     {selectLanguage[language].map((lang, index) => {
                         return <div key={index}>
-                        <h2>{lang.ourTeam}</h2>
+                        <h2>{lang.ourClients}</h2>
                         <div>
                             <Link to="/">{lang.home}</Link>
                             <span>|</span>
-                            <Link to="/team">{lang.ourTeam}</Link>
+                            <Link to="/team">{lang.ourClients}</Link>
                         </div>
                     </div>
                     })}
                 </div>
-                <HomeTeam></HomeTeam>
+                <HomeTeam selectLanguage={selectLanguage} language={language}></HomeTeam>
             </section>
             <Footer selectLanguage={selectLanguage} language={language}></Footer>
         </div>

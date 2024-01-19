@@ -1,13 +1,22 @@
-main{
+$sectionBackground: #F5F5F5;
+$titleColor: #4B4B73;
+
+main {
     max-width: 3000px;
     width: 100%;
-    background-color: gainsboro;
+    background-color: $sectionBackground;
     overflow: hidden;
     position: relative;
-    .sectionName{
-        font-size: 40px;
+    section {
+        .sectionName {
+            color: $titleColor;
+            font-size: 40px;
+            text-transform: uppercase;
+            margin-block-end: 40px;
+        }
     }
-    .fadeUp{
+
+    .fadeUp {
         position: fixed;
         width: 40px;
         height: 40px;
@@ -20,14 +29,17 @@ main{
         transition: 1s;
         z-index: 2222;
         cursor: pointer;
-        &.activeArrowUp{
-           right: 40px;
+
+        &.activeArrowUp {
+            right: 40px;
         }
-        svg{
+
+        svg {
             color: white;
             font-size: 45px;
         }
-        &:hover{
+
+        &:hover {
             background-color: black;
         }
     }

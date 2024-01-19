@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from '@emailjs/browser';
 import { BsTelephone } from "react-icons/bs";
 import { MdOutlineEmail } from "react-icons/md";
 import { FaFacebook, FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa";
@@ -7,7 +8,20 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import "./contact.scss";
 
-export default function Contact({ selectLanguage, language }) {
+
+export default function HomeContact({ selectLanguage, language }) {
+    const form = useRef()
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm("service_xu7xj59", "template_lasyknu", form.current, "yRQYJNN-RsW3Wa8JW")
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+    };
     return (
         selectLanguage[language].map((lang, index) => {
             return <div className="contactCont" key={index}>
@@ -71,11 +85,11 @@ export default function Contact({ selectLanguage, language }) {
                     </div>
                 </div>
                 <div className="message" data-aos="fade-down">
-                    <form>
-                        <input type="text" name="Name" required placeholder={lang.contactName}></input>
-                        <input type="email" name="email" required placeholder={lang.contactEmail}></input>
+                    <form action="#" ref={form} onSubmit={sendEmail}>
+                        <input type="text" name="user_name" required placeholder={lang.contactName}></input>
+                        <input type="email" name="user_email" required placeholder={lang.contactEmail}></input>
                         <input type="tel" name="phone" required placeholder={lang.contactMobileNumber}></input>
-                        <textarea placeholder={lang.contactMessage}></textarea>
+                        <textarea name="message" placeholder={lang.contactMessage}></textarea>
                         <button type="submit">{lang.sendMessage}</button>
                     </form>
                 </div>
