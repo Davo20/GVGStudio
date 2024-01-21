@@ -151,7 +151,7 @@
             padding: 20px 0;
 
             form {
-                width: 60%;
+                // width: 60%;
                 margin: 0 auto;
                 display: flex;
                 flex-direction: column;
@@ -160,7 +160,7 @@
 
                 // gap: 10px;
                 .ant-form-item.css-dev-only-do-not-override-zl9ks2 {
-                    width: 60%;
+                    // width: 60%;
 
                     .ant-col.ant-col-16.ant-form-item-control.css-dev-only-do-not-override-zl9ks2 {
                         width: 100%;
@@ -210,5 +210,26 @@
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 20px;
+    }
+}
+@media only screen and (min-width: 465px) {
+    .contactCont {
+        form {
+            width: 60%;
+            .ant-form-item.css-dev-only-do-not-override-zl9ks2 {
+                width: 60%;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 465px) {
+    .contactCont {
+        form {
+            width: 90%;
+            // gap: 10px;
+            .ant-form-item.css-dev-only-do-not-override-zl9ks2 {
+                width: 100%;
+            }
+        }
     }
 }
