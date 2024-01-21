@@ -54,6 +54,11 @@ export default function GVG() {
                 contactEmail: "Your Email",
                 contactMobileNumber: "Your Mobile Number",
                 contactMessage: "Message",
+                errorName: "Please input your Name!",
+                errorEmail: "Please input your E-mail!",
+                errorEmailValid: "The input is not valid E-mail!",
+                errorPhone: "Please input your phone number!",
+                errorMessage: "Please input!",
                 sendMessage: "Send",
                 footerCall: "Call for questions"
             }
@@ -92,6 +97,11 @@ export default function GVG() {
                 contactEmail: "Ձեր էլ․ հասցեն",
                 contactMobileNumber: "Ձեր հեռախոսահամարը",
                 contactMessage: "Հաղորդագրություն",
+                errorName: "Խնդրում ենք մուտքագրել ձեր անունը:",
+                errorEmail: "Խնդրում ենք մուտքագրել ձեր էլ. փոստի հասցեն",
+                errorEmailValid: "Մուտքագրումը վավեր Էլ. փոստի հասցե չէ",
+                errorPhone: "Խնդրում ենք մուտքագրել ձեր հեռախոսահամարը:",
+                errorMessage: "Խնդրում ենք մուտքագրել:",
                 sendMessage: "Ուղարկել",
                 footerCall: "Հարցերի համար զանգահարել"
             }
@@ -130,6 +140,11 @@ export default function GVG() {
                 contactEmail: "Ваш адрес эл․ почты адрес",
                 contactMobileNumber: "Ваш номер телефона",
                 contactMessage: "Сообщение",
+                errorName: "Пожалуйста, введите свое имя!",
+                errorEmail: "Пожалуйста, введите свой адрес электронной почты!",
+                errorEmailValid: "Введен неверный адрес электронной почты!",
+                errorPhone: "Пожалуйста, введите свой номер телефона!",
+                errorMessage: "Пожалуйста, введите!",
                 sendMessage: "Отправлять",
                 footerCall: "Звоните по вопросам"
             }

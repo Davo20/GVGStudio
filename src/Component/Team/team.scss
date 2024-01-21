@@ -124,17 +124,17 @@ $titleColor: #4B4B73;
 }
 // TABLETS SCREEN
 @media only screen and (max-width: 860px) {
-    .teamCont {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
+    // .teamCont {
+    //     display: grid;
+    //     grid-template-columns: repeat(2, 1fr);
+    //     gap: 20px;
+    // }
 }
 // MOBILE SCREEN
 @media only screen and (max-width: 465px) {
-    .teamCont {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 20px;
-    }
+    // .teamCont {
+    //     display: grid;
+    //     grid-template-columns: repeat(1, 1fr);
+    //     gap: 20px;
+    // }
 }

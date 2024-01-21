@@ -1,7 +1,8 @@
 import React, { useRef } from "react";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import pic from "../../img/headerPic.jpg";
+// import pic from "../../img/headerPic.jpg";
+import pic from "../../img/image.jpg";
 import "./header.scss"
 
 export default function Header({ selectLanguage, language }) {

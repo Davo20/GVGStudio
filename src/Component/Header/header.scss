@@ -4,6 +4,7 @@ header{
     // padding-bottom: 60px;
     .headerCont, .headerContTwo{
         background: url(../../img/backgroundHeader.jpg);
+        // background-image: url(../../img/image.jpg);
         background-repeat: no-repeat;
         background-origin: content-box;
         background-position: center;
@@ -17,7 +18,7 @@ header{
         display: flex;
         align-items: center;
         justify-content: center;
-        filter: grayscale(50%);
+        filter: grayscale(100%) saturate(100%) sepia(0.6) hue-rotate(170deg) saturate(140%) brightness(91%);;
         img{
             width: 100%;
             height: 100%;
@@ -43,7 +44,10 @@ header{
         }
     }
     .headerContTwo{
-        background-image: url(../../img/website.jpg);
+        // background-image: url(../../img/website.jpg);
+        background-image: url(../../img/image.jpg);
+        color: white;
+        filter: grayscale(50%) saturate(0%) sepia(0.6) hue-rotate(5deg) saturate(113%) brightness(54%);
     }
     .react-multi-carousel-dot-list {
         bottom: 10px;
