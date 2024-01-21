@@ -156,16 +156,16 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                .ant-form-item.css-dev-only-do-not-override-zl9ks2 {
+                // .ant-form-item.css-dev-only-do-not-override-zl9ks2 {
 
 
-                    .ant-col.ant-col-16.ant-form-item-control.css-dev-only-do-not-override-zl9ks2 {
-                        width: 100%;
-                        max-width: 100%;
+                //     .ant-col.ant-col-16.ant-form-item-control.css-dev-only-do-not-override-zl9ks2 {
+                //         width: 100%;
+                //         max-width: 100%;
                         
-                    }
+                //     }
 
-                }
+                // }
                 input,
                 textarea {
                     display: block;
@@ -211,7 +211,17 @@
             width: 60%;
             .ant-form-item.css-dev-only-do-not-override-zl9ks2 {
                 width: 60%;
+
+                .ant-col.ant-col-16.ant-form-item-control.css-dev-only-do-not-override-zl9ks2 {
+                    width: 100%;
+                    max-width: 100%;
+                    
+                }
+
             }
+            // .ant-form-item.css-dev-only-do-not-override-zl9ks2 {
+                
+            // }
         }
     }
 }
