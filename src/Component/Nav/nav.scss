@@ -141,7 +141,7 @@
     background-image: linear-gradient(111.4deg, rgba(7, 7, 9, 1) 6.5%, rgba(27, 24, 113, 1) 93.2%);
 }
 
-@media only screen and (min-width: 860px) {
+@media only screen and (min-width: 1024px) {
     .navCont {
 
         .burgerOpen,
@@ -155,7 +155,7 @@
     }
 }
 
-@media only screen and (max-width: 860px) {
+@media only screen and (max-width: 1024px) {
     .navBarMenu {
         display: none;
     }
@@ -191,10 +191,13 @@
 }
 
 @media only screen and (min-width: 465px) {
-    img{
-        height: 70px;
-        top: -30px;
-                left: 17px;
+    .navCont{
+
+        img{
+            height: 120px;
+            top: -30px;
+                    left: 17px;
+        }
     }
 }
 
