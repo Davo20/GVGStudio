@@ -151,16 +151,13 @@
             padding: 20px 0;
 
             form {
-                // width: 60%;
                 margin: 0 auto;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-
-                // gap: 10px;
                 .ant-form-item.css-dev-only-do-not-override-zl9ks2 {
-                    // width: 60%;
+
 
                     .ant-col.ant-col-16.ant-form-item-control.css-dev-only-do-not-override-zl9ks2 {
                         width: 100%;
@@ -169,10 +166,6 @@
                     }
 
                 }
-                // .colorBorder{
-                //     border: 1px solid black;
-                // }
-
                 input,
                 textarea {
                     display: block;
@@ -226,7 +219,6 @@
     .contactCont {
         form {
             width: 90%;
-            // gap: 10px;
             .ant-form-item.css-dev-only-do-not-override-zl9ks2 {
                 width: 100%;
             }
