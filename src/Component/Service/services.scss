@@ -1,5 +1,6 @@
 .service {
     width: 100%;
+
     .serviceHeader {
         background-image: url(../../img/service.jpg);
         background-repeat: no-repeat;
@@ -15,6 +16,7 @@
         justify-content: center;
         position: relative;
         margin-bottom: 60px;
+
         div {
 
             h2 {
@@ -28,10 +30,12 @@
                 margin: 0 auto;
                 display: flex;
                 justify-content: space-around;
+
                 a {
                     text-decoration: none;
                     color: gray;
-                    &:hover{
+
+                    &:hover {
                         color: white;
                     }
                 }
@@ -72,7 +76,9 @@
     .react-multi-carousel-dot-list {
         padding-bottom: 10px;
         gap: 15px;
+
         .react-multi-carousel-dot {
+
             // gap: 30px;
             button {
                 width: 25px;
@@ -80,6 +86,7 @@
                 border-radius: 50px;
                 // border: 1px solid black;
                 border: none;
+
                 &:hover {
                     background-color: rgb(41, 41, 176);
                     // width: 32px;
@@ -93,12 +100,98 @@
 
             button {
                 background-color: rgb(41, 41, 176);
-                // width: 32px;
                 transform: scale(1.3);
                 border: none;
-                // padding: 5px;
-                // padding: 3px;
             }
         }
+    }
+
+    .serviceCategory {
+        display: grid;
+        width: 90%;
+        margin: 0 auto;
+        gap: 20px;
+        margin-top: 60px;
+
+        .serviceCategoryCard {
+            background-color: #dddde7;
+
+            .cardHeader {
+                width: 100%;
+                height: auto;
+                padding: 20px 0;
+                background-color: #4B4B73;
+
+                svg {
+                    font-size: 40px;
+                    color: white;
+                }
+
+                h3 {
+                    color: #F5F5F5;
+                }
+            }
+
+            .cardSection {
+                margin: 0;
+                width: 100%;
+                h3{
+                    color: #4B4B73;
+                }
+
+                div {
+                    width: 80%;
+                    margin: 0 auto;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    border-width: 1px 0 0 0;
+                    border-color: #4B4B73;
+                    border-style: solid;
+
+                    ul {
+                        width: 100%;
+
+                        li {
+                            position: relative;
+                            width: 170px;
+                            display: flex;
+                            justify-content: space-around;
+                            align-items: center;
+                            margin: 0 auto;
+
+                            svg {
+                                position: absolute;
+                                left: -40px;
+                                color: #4B4B73;
+                            }
+                        }
+                    }
+
+                    svg {
+                        font-size: 30px;
+                        width: 20%;
+                    }
+                }
+            }
+            .cardPrice{
+                width: 30%;
+                height: 60px;
+                margin: 0 auto;
+                border-top: 1px solid #4B4B73;
+                line-height: 60px;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 750px) {
+    .serviceCategory {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (max-width: 750px) {
+    .serviceCategory {
+        grid-template-columns: repeat(1, 1fr);
     }
 }

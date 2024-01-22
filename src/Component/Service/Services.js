@@ -12,7 +12,8 @@ import website from "../../img/website.jpg";
 import end from "../../img/end.jpg"
 import HomeService from "./HomeService";
 import Footer from "../Footer/Footer";
-import { FaVideo } from "react-icons/fa";
+import { FaVideo, FaCamera } from "react-icons/fa";
+import { MdOutlineCheckCircleOutline } from "react-icons/md";
 import { Outlet, Link } from "react-router-dom";
 
 export default function Services({ selectLanguage, language }) {
@@ -79,19 +80,65 @@ export default function Services({ selectLanguage, language }) {
                 <div className="serviceHeader">
                     {selectLanguage[language].map((lang, index) => {
                         return <div key={index}>
-                        <h2>{lang.ourService}</h2>
-                        <div>
-                            <Link to="/">{lang.home}</Link>
-                            <span>|</span>
-                            <Link to="/services">{lang.ourService}</Link>
+                            <h2>{lang.ourService}</h2>
+                            <div>
+                                <Link to="/">{lang.home}</Link>
+                                <span>|</span>
+                                <Link to="/services">{lang.ourService}</Link>
+                            </div>
                         </div>
-                    </div>
                     })}
                 </div>
                 <HomeService language={language} selectLanguage={selectLanguage}></HomeService>
                 <div className="serviceCategory">
-                    <div></div>
-                    <div></div>
+                    <div className="serviceCategoryCard">
+                        <div className="cardHeader">
+                            <FaCamera />
+                            <h3>Photography</h3>
+                        </div>
+                        <div className="cardSection">
+                            <h3>All day (up to 8 hours)</h3>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <MdOutlineCheckCircleOutline></MdOutlineCheckCircleOutline>
+                                        <p>Photographer</p>
+                                    </li>
+                                    <li>
+                                        <MdOutlineCheckCircleOutline></MdOutlineCheckCircleOutline>
+                                        <p>Photoshop Specialist</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="cardPrice">
+                            <span>100000AMD</span>
+                        </div>
+                    </div>
+                    <div className="serviceCategoryCard">
+                        <div className="cardHeader">
+                            <FaVideo />
+                            <h3>Video recording</h3>
+                        </div>
+                        <div className="cardSection">
+                            <h3>5 minute video to half a day</h3>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <MdOutlineCheckCircleOutline></MdOutlineCheckCircleOutline>
+                                        <p>2 videographers</p>
+                                    </li>
+                                    <li>
+                                        <MdOutlineCheckCircleOutline></MdOutlineCheckCircleOutline>
+                                        <p>Assembler</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="cardPrice">
+                            <span>250000AMD</span>
+                        </div>
+                    </div>
                 </div>
 
             </section>
