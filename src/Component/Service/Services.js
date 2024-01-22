@@ -12,6 +12,7 @@ import website from "../../img/website.jpg";
 import end from "../../img/end.jpg"
 import HomeService from "./HomeService";
 import Footer from "../Footer/Footer";
+import { FaVideo } from "react-icons/fa";
 import { Outlet, Link } from "react-router-dom";
 
 export default function Services({ selectLanguage, language }) {
@@ -88,6 +89,10 @@ export default function Services({ selectLanguage, language }) {
                     })}
                 </div>
                 <HomeService language={language} selectLanguage={selectLanguage}></HomeService>
+                <div className="serviceCategory">
+                    <div></div>
+                    <div></div>
+                </div>
 
             </section>
             <Footer selectLanguage={selectLanguage} language={language}></Footer>

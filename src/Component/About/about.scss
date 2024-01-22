@@ -33,10 +33,12 @@
                 margin: 0 auto;
                 display: flex;
                 justify-content: space-around;
+
                 a {
                     text-decoration: none;
                     color: gray;
-                    &:hover{
+
+                    &:hover {
                         color: white;
                     }
                 }
@@ -51,22 +53,85 @@
     .aboutCont {
         width: 90%;
         margin: 0 auto;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        gap: 40px;
 
-        .aboutText {
-            text-align: left;
-            p{
-                line-height: 30px;
+        // display: flex;
+        // justify-content: space-around;
+        // align-items: center;
+        // gap: 40px;
+        .aboutUsCont {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 40px;
+
+            .aboutText {
+                text-align: left;
+
+                p {
+                    line-height: 30px;
+                }
             }
         }
+
+        .aboutUsData {
+            width: 90%;
+            margin: 40px auto;
+
+            h2 {
+                font-size: 25px;
+                color: #4B4B73;
+            }
+
+            .aboutUsDataCont {
+                width: 100%;
+                display: grid;
+                gap: 1px;
+
+                .aboutUsDataCard {
+                    padding: 20px 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 20px;
+                    flex-direction: column;
+                    border-style: solid;
+                    border-color: rgb(201, 199, 199);
+
+
+                    div {
+                        width: 100%;
+                        margin: 0 auto;
+
+                        svg {
+                            font-size: 40px;
+                            color: #4B4B73;
+                        }
+
+                        p {
+                            width: 80%;
+                            margin: 0 auto;
+                            letter-spacing: 1px;
+                            line-height: 25px;
+                            color: rgb(78, 77, 77);
+                        }
+                    }
+
+                    .aboutUsDataCardText {
+                        min-height: 150px;
+                        height: auto;
+                    }
+                }
+            }
+
+        }
+
+
     }
 }
 
-@media only screen and (max-width: 860px) {
-    .aboutCont {
+@media only screen and (max-width: 1024px) {
+    .aboutUsCont {
         flex-direction: column;
 
         .aboutPic {
@@ -76,5 +141,76 @@
                 width: 100%;
             }
         }
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .aboutCont {
+        .aboutUsData {
+
+            .aboutUsDataCont {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+
+                .aboutUsDataCard {
+                    &:nth-child(1) {
+                        border-width: 0 1px 1px 0;
+                    }
+
+                    &:nth-child(2) {
+                        border-width: 0 0 1px 0;
+                    }
+
+                    &:nth-child(3) {
+                        border-width: 0 1px 1px 0;
+                    }
+
+                    &:nth-child(4) {
+                        border-width: 0 0 1px 0;
+                    }
+
+                    &:nth-child(5) {
+                        border-width: 0 1px 0 0;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .aboutCont {
+        .aboutUsData {
+
+            .aboutUsDataCont {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+
+                .aboutUsDataCard {
+                    &:nth-child(1) {
+                        border-width: 0 0 1px 0;
+                    }
+
+                    &:nth-child(2) {
+                        border-width: 0 0 1px 0;
+                    }
+
+                    &:nth-child(3) {
+                        border-width: 0 0 1px 0;
+                    }
+
+                    &:nth-child(4) {
+                        border-width: 0 0 1px 0;
+                    }
+
+                    &:nth-child(5) {
+                        border-width: 0 0 0 0;
+                    }
+
+                }
+            }
+        }
+
     }
 }

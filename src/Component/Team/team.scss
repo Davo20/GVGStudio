@@ -10,14 +10,15 @@ $titleColor: #4B4B73;
     }
 
     .teamHeader {
-        background-image: url(../../img/h.webp);
+        background-image: url(../../img/clientsPic.png);
         background-repeat: no-repeat;
         background-origin: content-box;
+        // background-attachment: fixed;
         background-size: 100%;
         background-size: cover;
-        background-attachment: fixed;
-        width: 100%;
-        height: 90vh;
+        
+        // width: 100%;
+        // height: 80vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -123,15 +124,21 @@ $titleColor: #4B4B73;
     // }
 }
 // TABLETS SCREEN
-@media only screen and (max-width: 860px) {
+@media only screen and (min-width: 465px) {
     // .teamCont {
     //     display: grid;
     //     grid-template-columns: repeat(2, 1fr);
     //     gap: 20px;
     // }
+    .teamHeader{
+        height: 80vh;
+    }
 }
 // MOBILE SCREEN
 @media only screen and (max-width: 465px) {
+    .teamHeader{
+        height: 70vh;
+    }
     // .teamCont {
     //     display: grid;
     //     grid-template-columns: repeat(1, 1fr);
