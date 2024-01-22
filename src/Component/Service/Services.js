@@ -15,6 +15,7 @@ import Footer from "../Footer/Footer";
 import { FaVideo, FaCamera } from "react-icons/fa";
 import { MdOutlineCheckCircleOutline } from "react-icons/md";
 import { Outlet, Link } from "react-router-dom";
+import serviceCardData from "./serviceCardData.json"
 
 export default function Services({ selectLanguage, language }) {
 
@@ -91,31 +92,34 @@ export default function Services({ selectLanguage, language }) {
                 </div>
                 <HomeService language={language} selectLanguage={selectLanguage}></HomeService>
                 <div className="serviceCategory">
-                    <div className="serviceCategoryCard">
+                    {serviceCardData[language].map((elem, index)=>{
+
+                    return <div className="serviceCategoryCard">
                         <div className="cardHeader">
                             <FaCamera />
-                            <h3>Photography</h3>
+                            <h3>{elem.cardTitle.toUpperCase()}</h3>
                         </div>
                         <div className="cardSection">
-                            <h3>All day (up to 8 hours)</h3>
+                            <h3>{elem.cardInfo}</h3>
                             <div>
                                 <ul>
                                     <li>
                                         <MdOutlineCheckCircleOutline></MdOutlineCheckCircleOutline>
-                                        <p>Photographer</p>
+                                        <p>{elem.cardSpan}</p>
                                     </li>
                                     <li>
                                         <MdOutlineCheckCircleOutline></MdOutlineCheckCircleOutline>
-                                        <p>Photoshop Specialist</p>
+                                        <p>{elem.cardSpanTwo}</p>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                         <div className="cardPrice">
-                            <span>100000AMD</span>
+                            <span>{`${elem.cardPrice.toLocaleString()}${elem.price}`}</span>
                         </div>
                     </div>
-                    <div className="serviceCategoryCard">
+                    })}
+                    {/* <div className="serviceCategoryCard">
                         <div className="cardHeader">
                             <FaVideo />
                             <h3>Video recording</h3>
@@ -138,7 +142,7 @@ export default function Services({ selectLanguage, language }) {
                         <div className="cardPrice">
                             <span>250000AMD</span>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
             </section>
