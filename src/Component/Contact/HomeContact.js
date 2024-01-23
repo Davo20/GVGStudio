@@ -149,10 +149,10 @@ export default function HomeContact({ selectLanguage, language }) {
                             name="user_phone"
                             rules={[{ required: true, message: lang.errorPhone }]}
                         >
-                            <Input name="user_phone" addonBefore={prefixSelector} style={{ width: '100%' }} />
+                            <Input name="user_phone" addonBefore={prefixSelector} style={{ width: '100%' }} placeholder={lang.contactMobileNumber} />
                         </Form.Item>
                         <Form.Item name="message" rules={[{required: true, message: lang.errorMessage}]}>
-                            <Input.TextArea name="message"/>
+                            <Input.TextArea name="message" placeholder={lang.contactMessage}/>
                         </Form.Item>
                         <Form.Item>
                             <Button type="primary" htmlType="submit" onSubmit={(e)=>console.log(e.target)}>

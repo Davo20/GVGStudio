@@ -4,7 +4,7 @@ import Header from "./Header/Header";
 import HomeAbout from "./About/HomeAbout";
 import Aside from "./Aside/Aside"
 import HomePortfolio from "./Portfolio/HomePortfolio";
-import HomeTeam from "./Team/HomeTeam";
+import HomeClients from "./Clients/HomeClients";
 import HomeContact from "./Contact/HomeContact";
 import Footer from "./Footer/Footer"
 import aboutPic from "../img/about.jpg"
@@ -135,7 +135,7 @@ export default function Home({ selectLanguage, language }) {
                 {selectLanguage[language].map((lang, index) => {
                     return <h2 key={BsHandIndexThumb} className="sectionName" data-aos="zoom-out">{lang.ourTeam}</h2>
                 })}
-                <HomeTeam selectLanguage={selectLanguage} language={language}></HomeTeam>
+                <HomeClients selectLanguage={selectLanguage} language={language}></HomeClients>
             </section>
             {/* CONTACT SECTION */}
             <section className="contact">

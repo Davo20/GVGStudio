@@ -59,7 +59,7 @@ export default function Footer({ selectLanguage, language }) {
                                 <Link to="/portfolio">{lang.portfolio}</Link>
                             </li>
                             <li>
-                                <Link to="/team">{lang.team}</Link>
+                                <Link to="/clients">{lang.clients}</Link>
                             </li>
                             <li>
                                 <Link to="/contact">{lang.contact}</Link>

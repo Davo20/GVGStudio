@@ -7,7 +7,7 @@ import { Parallax } from 'react-scroll-parallax';
 import ReactPlayer from 'react-player'
 
 
-export default function Portfolio({ selectLanguage, language }) {
+export default function HomePortfolio({ selectLanguage, language }) {
     const [videoOpen, setVideoOpen] = useState(false)
     const [d, setd] = useState("")
     const [readMore, setReadMore] = useState(6)

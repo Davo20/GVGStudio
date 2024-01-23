@@ -5,7 +5,7 @@ import Home from "./Home"
 import About from "./About/About";
 import Services from "./Service/Services"
 import Portfolio from "./Portfolio/Portfolio";
-import Team from "./Team/Team";
+import Clients from "./Clients/Clients";
 import Contact from "./Contact/Contact";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { MdOutlineKeyboardArrowUp } from "react-icons/md";
@@ -177,11 +177,11 @@ export default function GVG() {
                 <Nav languageClick={languageClick} language={language} selectLanguage={selectLanguage}></Nav>
                 <Routes>
                     <Route path="/" element={<Home selectLanguage={selectLanguage} language={language}></Home>}></Route>
-                    <Route path="about" element={<About selectLanguage={selectLanguage} language={language}></About>}></Route>
-                    <Route path="services" element={<Services selectLanguage={selectLanguage} language={language}></Services>}></Route>
-                    <Route path="portfolio" element={<Portfolio selectLanguage={selectLanguage} language={language}></Portfolio>}></Route>
-                    <Route path="team" element={<Team selectLanguage={selectLanguage} language={language}></Team>}></Route>
-                    <Route path="contact" element={<Contact selectLanguage={selectLanguage} language={language}></Contact>}></Route>
+                    <Route path="/about" element={<About selectLanguage={selectLanguage} language={language}></About>}></Route>
+                    <Route path="/services" element={<Services selectLanguage={selectLanguage} language={language}></Services>}></Route>
+                    <Route path="/portfolio" element={<Portfolio selectLanguage={selectLanguage} language={language}></Portfolio>}></Route>
+                    <Route path="/clients" element={<Clients selectLanguage={selectLanguage} language={language}></Clients>}></Route>
+                    <Route path="/contact" element={<Contact selectLanguage={selectLanguage} language={language}></Contact>}></Route>
                 </Routes>
             </BrowserRouter>
             <div className={"fadeUp " + (arrowFadeUp && "activeArrowUp")} onClick={scrollUp}>

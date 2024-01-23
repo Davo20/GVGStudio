@@ -1,12 +1,12 @@
 import React from "react";
-import "./team.scss";
+import "./clients.scss";
 import teamPic from "../../img/2.jpg"
 import sas from "../../img/sas-logo.png";
 import collaboratorData from "./collaboratorData.json"
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
-export default function Team({ selectLanguage, language }) {
+export default function HomeClients({ selectLanguage, language }) {
 
     const responsive = {
         desktop: {

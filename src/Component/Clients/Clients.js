@@ -1,8 +1,8 @@
 import React from "react";
-import HomeTeam from "./HomeTeam";
+import HomeClients from "./HomeClients";
 import Footer from "../Footer/Footer";
 import { Outlet, Link } from "react-router-dom";
-import "./team.scss";
+import "./clients.scss";
 import teamPic from "../../img/2.jpg"
 
 export default function Team({ selectLanguage, language }) {
@@ -22,7 +22,7 @@ export default function Team({ selectLanguage, language }) {
                     </div>
                     })}
                 </div>
-                <HomeTeam selectLanguage={selectLanguage} language={language}></HomeTeam>
+                <HomeClients selectLanguage={selectLanguage} language={language}></HomeClients>
             </section>
             <Footer selectLanguage={selectLanguage} language={language}></Footer>
         </div>

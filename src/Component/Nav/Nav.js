@@ -53,7 +53,7 @@ export default function Nav({ languageClick, language, selectLanguage }) {
                             <Link to="/portfolio">
                                 <li>{lang.portfolio}</li>
                             </Link>
-                            <Link to="/team">
+                            <Link to="/clients">
                                 <li>{lang.clients}</li>
                             </Link>
                             <Link to="/contact">

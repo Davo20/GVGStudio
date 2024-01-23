@@ -26,7 +26,7 @@ export default function Contact({ selectLanguage, language }) {
                 </div>
                 {selectLanguage[language].map((lang, index) => {
                         return <div key={index}>
-                            <h2>{lang.contactUs}</h2>
+                            <h2 className="sectionName">{lang.contactUs}</h2>
                             <p>{lang.contactAbout}</p>
                         </div>
                     })}
