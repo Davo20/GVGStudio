@@ -32,9 +32,6 @@ export default function Nav({ languageClick, language, selectLanguage }) {
             {/* <nav className={navSticky ? "scrollNavActive" : "navBar"}></nav> */}
             <div className="navCont">
                 <div className="logo">
-                    {/* <img src={logo}></img> */}
-                    {/* <span>STUDIO</span>
-                    <span>GVG</span> */}
                     <img src={logo}></img>
                 </div>
 
@@ -68,7 +65,8 @@ export default function Nav({ languageClick, language, selectLanguage }) {
                                     </select> */}
                                     <Select
                                         // labelInValue
-                                        defaultValue={{ value: "English", label: "EN" }}
+                                        value={{ value: language}}
+                                        defaultValue={{value: "Armenian"}}
                                         style={{ width: 60, height: 20 }}
                                         listItemHeight={30}
                                         onChange={languageClick}

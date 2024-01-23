@@ -22,7 +22,7 @@ export default function Portfolio({ selectLanguage, language }) {
                         </div>
                     })}
                 </div>
-                <HomePortfolio></HomePortfolio>
+                <HomePortfolio selectLanguage={selectLanguage} language={language}></HomePortfolio>
             </section>
             <Footer selectLanguage={selectLanguage} language={language}></Footer>
         </div>

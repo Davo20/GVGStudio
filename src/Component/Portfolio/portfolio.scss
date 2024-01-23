@@ -71,12 +71,16 @@ $color: #4B4B73;
             transition: 0.3s;
             border: 1px solid $color;
             color: $color;
+            letter-spacing: 2px;
 
             &:hover {
                 background-color: $color;
                 color: white;
             }
 
+            &:nth-child(3){
+                font-size: 10px;
+            }
         }
 
         .activeColor {
@@ -96,6 +100,7 @@ $color: #4B4B73;
         transition: 0.3s;
         border: 2px solid $color;
         cursor: pointer;
+        letter-spacing: 1px;
 
         &:hover {
             background-color: $color;

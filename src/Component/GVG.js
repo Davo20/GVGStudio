@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Nav from "./Nav/Nav"
 import Header from "./Header/Header";
 import Home from "./Home"
@@ -11,14 +11,25 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { MdOutlineKeyboardArrowUp } from "react-icons/md";
 import "./home.scss"
 
+if(!localStorage.getItem("langg")){
+    localStorage.setItem("langg", JSON.stringify("Armenian"))
+}
 export default function GVG() {
-    const [language, setLanguage] = useState("English")
+    const [languagee, setLanguage] = useState("Armenian")
+    let vv = JSON.parse(localStorage.getItem("langg"))
+    // let vv = localStorage.getItem("langg")
+    const [language, setLanguagee] = useState(vv)
     const [arrowFadeUp, setArrowUp] = useState(false)
 
+    // localStorage.setItem("langg", JSON.stringify(languagee))
+    // useEffect(()=>{
 
+    // },[languagee])
+    localStorage.setItem("langg", JSON.stringify(language))
     const languageClick = (value) => {
-        setLanguage(value) // { value: "lucy", key: "lucy", label: "Lucy (101)" }
-      };
+        setLanguagee(value) // { value: "lucy", key: "lucy", label: "Lucy (101)" }
+        window.location.reload(true);
+    };
     const selectLanguage = {
         English: [
             {
@@ -44,6 +55,7 @@ export default function GVG() {
                 informative: "Informative",
                 playful: "Playful",
                 animated: "Animated-2D, 3D",
+                watchMore: "Watch More",
                 shotingVideos: "Shooting and making videos",
                 visualizationOfStartups: "Visualization of startups",
                 reparationOfWebsites: "Preparation of websites",
@@ -88,6 +100,7 @@ export default function GVG() {
                 informative: "Ինֆորմացիոն",
                 playful: "Խաղարկային",
                 animated: "Անիմացիոն-2D, 3D",
+                watchMore: "Դիտել ավելին",
                 shotingVideos: "Տեսահոլովակների նկարահանում և նպատրաստում",
                 visualizationOfStartups: "Ստարտափերի վիզուալիզացում",
                 reparationOfWebsites: "Կայքերի պատրաստում",
@@ -132,6 +145,7 @@ export default function GVG() {
                 informative: "Информационный",
                 playful: "Игривый",
                 animated: "Анимированные-2D, 3D",
+                watchMore: "Посмотреть больше",
                 shotingVideos: "Съемки и производство видеоклипов",
                 visualizationOfStartups: "Визуализация стартапов",
                 reparationOfWebsites: "Подготовка сайтов",

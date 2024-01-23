@@ -128,7 +128,7 @@ export default function Home({ selectLanguage, language }) {
                 {selectLanguage[language].map((lang, index) => {
                     return <h2 key={index} className="sectionName" data-aos="zoom-out">{lang.portfolio}</h2>
                 })}
-                <HomePortfolio></HomePortfolio>
+                <HomePortfolio selectLanguage={selectLanguage} language={language}></HomePortfolio>
             </section>
             {/* TEAM SECTION */}
             <section className="team">

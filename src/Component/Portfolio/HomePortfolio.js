@@ -2,7 +2,8 @@ import "./portfolio.scss";
 import React, { useState, useEffect, useRef } from "react";
 import { CiPlay1 } from "react-icons/ci";
 import { AiOutlineClose } from "react-icons/ai";
-import portfolioData from "./portfolio.json"
+import portfolioData from "./portfolio.json";
+import portfolioButton from "./portfolioButton.json"
 import { Parallax } from 'react-scroll-parallax';
 import ReactPlayer from 'react-player'
 
@@ -14,8 +15,11 @@ export default function HomePortfolio({ selectLanguage, language }) {
     const [allProduct, setAllProduct] = useState([])
     const [filterPortfolio, setFilterPortfolio] = useState([...portfolioData])
     const video = useRef(null)
-    let filterWork = ["All", "Imigayin", "Information", "Animation 2D, 3D", "Playful", "Events", "Startup"]
-
+    let watchMoreButton = {
+        English: {watchMore: "Watch More"},
+        Armenian: {watchMore: "Դիտել ավելին"},
+        Russian: {watchMore: "Посмотреть больше"}
+    }
     const watchVideoClick = (e) => {
         portfolioData.map((elem) => {
             if (e.target.id == elem.id) {
@@ -29,9 +33,9 @@ export default function HomePortfolio({ selectLanguage, language }) {
     }
 
     const filterProduct = (value)=>{
-        const filter = portfolioData.filter((valuee)=> valuee.format === value || valuee.formatTwo === value)
+        const filter = portfolioData.filter((valuee)=> valuee.formatEng === value || valuee.formatArm === value || valuee.formatRu === value || valuee.formatTwoEng === value || valuee.formatTwoArm === value || valuee.formatTwoRu === value)
         setFilterPortfolio([...filter])
-        if(value === "All"){
+        if(value === "All" || value === "Բոլորը" || value === "Все"){
             setFilterPortfolio([...portfolioData])
         }
         if (allProduct.includes(value)) {
@@ -57,7 +61,7 @@ export default function HomePortfolio({ selectLanguage, language }) {
     return (
         <div className="abouCont">
             <div className="filterButton">
-                {filterWork.map((elem, index) => {
+                {portfolioButton[language].map((elem, index) => {
                     return <button key={index} onClick={() => filterProduct(elem)}
                         style={{ backgroundColor: elem }}
                         className={`button ${allProduct?.includes(elem) ? "activeColor" : ""
@@ -84,7 +88,7 @@ export default function HomePortfolio({ selectLanguage, language }) {
                 {/* <ReactPlayer url='https://drive.google.com/file/d/1yoC3h41DPHwkZSTrrwoPqGUiB8EWjcZi/view?usp=sharing' /> */}
             </div>}
             
-            {readMore < filterPortfolio.length ? <button onClick={readMoreClick} className="loadMore">Read More</button> : null}
+            {readMore < filterPortfolio.length ? <button onClick={readMoreClick} className="loadMore">{watchMoreButton[language].watchMore}</button> : null}
         </div>
         
     )

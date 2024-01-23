@@ -1,24 +1,48 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState,  useLayoutEffect, useContext } from "react";
 import emailjs from '@emailjs/browser';
 import { BsTelephone } from "react-icons/bs";
 import { MdOutlineEmail } from "react-icons/md";
 import { FaFacebook, FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import { Outlet, Link } from "react-router-dom";
-import { Input, InputNumber, AutoComplete, Button, Form, Select, } from 'antd';
+import { StyleProvider } from '@ant-design/cssinjs';
+import { ExclamationCircleFilled } from '@ant-design/icons';
+import { Input, InputNumber, AutoComplete, Button, Form, Select, message, Space, ConfigProvider, App, notification } from 'antd';
 import Aos from "aos";
 import "aos/dist/aos.css";
 import "./contact.scss";
 
 const { Option } = Select;
+const succesMessage = {
+    English: {text: "Message send successfully!"},
+    Armenian: {text: "Հաղորդագրությունը հաջողությամբ ուղարկվեց:"},
+    Russian: {text: "Сообщение успешно отправлено!"}
+}
 
 export default function HomeContact({ selectLanguage, language }) {
     const [form] = Form.useForm();
+    const [messageApi, contextHolder] = message.useMessage();
+    const { locale, theme } = useContext(ConfigProvider.ConfigContext);
+    useLayoutEffect(() => {
+        ConfigProvider.config({
+            holderRender: (children) => (
+                <StyleProvider hashPriority="high">
+                    <ConfigProvider prefixCls="static" iconPrefixCls="icon" locale={locale} theme={theme}>
+                        <App message={{ maxCount: 1, top: 100}} notification={{ maxCount: 1 }}>
+                            {children}
+                        </App>
+                    </ConfigProvider>
+                </StyleProvider>
+            ),
+        });
+    }, [locale, theme]);
 
-    const formm = useRef()
+    const success = () => {
+        message.success(succesMessage[language].text)
+    };
 
     const prefixSelector = (
         <Form.Item name="prefix" noStyle>
-            <Select name="user_prefix" style={{ width: 80 }}>
+            <Select name="user_prefix" style={{ width: 80 }} defaultValue="374">
                 <Option value="374">+374</Option>
                 <Option value="7">+7</Option>
             </Select>
@@ -27,7 +51,7 @@ export default function HomeContact({ selectLanguage, language }) {
     const emailValid = /^[a-zA-Z0-9._]+@[a-z]+\.[a-z]{2,6}$/
     const sendEmail = (e) => {
         e.preventDefault();
-        if(e.target[0].value != "" && e.target[1].value != "" && emailValid.test(e.target[1].value) && e.target[3].value != "" && e.target[4].value != ""){
+        if (e.target[0].value != "" && e.target[1].value != "" && emailValid.test(e.target[1].value) && e.target[3].value != "" && e.target[4].value != "") {
 
             // emailjs.sendForm("service_xu7xj59", "template_lasyknu", e.currentTarget, "yRQYJNN-RsW3Wa8JW")
             //     .then((result) => {
@@ -35,20 +59,21 @@ export default function HomeContact({ selectLanguage, language }) {
             //     }, (error) => {
             //         console.log(error.text);
             //     });
-            }
-            console.log(e.target[2].id)
-            
-        
+            success()
+        }
+        console.log(e.target[2].id)
 
-        
-        
+
+
+
+
     };
-   
-    const hh = (e) => {
-        if (emailValid.test(e.target.value)) {
-            console.log("validation")
+
+    const phoneNumber = (e) => {
+        if (e.target.value === " ") {
+            console.log("eror")
         } else {
-            console.log("not validation")
+            console.log("true")
         }
     }
     return (
@@ -83,28 +108,28 @@ export default function HomeContact({ selectLanguage, language }) {
                         <ul>
                             <li>
                                 <div>
-                                    <Link to="https://www.facebook.com/gvg.studio">
+                                    <Link to="https://www.facebook.com/gvg.studio" target="_blank">
                                         <FaFacebook ></FaFacebook >
                                     </Link>
                                 </div>
                             </li>
                             <li>
                                 <div>
-                                    <Link to="https://www.instagram.com/gvg__studio/">
+                                    <Link to="https://www.instagram.com/gvg__studio/" target="_blank">
                                         <FaInstagram ></FaInstagram >
                                     </Link>
                                 </div>
                             </li>
                             <li>
                                 <div>
-                                    <Link to="">
+                                    <Link to="" target="_blank">
                                         <FaWhatsapp ></FaWhatsapp >
                                     </Link>
                                 </div>
                             </li>
                             <li>
                                 <div>
-                                    <Link to="https://www.youtube.com/@gvgstudio5857/featured">
+                                    <Link to="https://www.youtube.com/@gvgstudio5857/featured" target="_blank">
                                         <FaYoutube ></FaYoutube >
                                     </Link>
                                 </div>
@@ -128,7 +153,7 @@ export default function HomeContact({ selectLanguage, language }) {
                             tooltip="What do you want others to call you?"
                             rules={[{ required: true, message: lang.errorName, whitespace: true }]}
                         >
-                            <Input name="user_name" placeholder={lang.contactName}/>
+                            <Input name="user_name" placeholder={lang.contactName} />
                         </Form.Item>
                         <Form.Item
                             name="user_email"
@@ -148,19 +173,22 @@ export default function HomeContact({ selectLanguage, language }) {
                         <Form.Item
                             name="user_phone"
                             rules={[{ required: true, message: lang.errorPhone }]}
+
                         >
-                            <Input name="user_phone" addonBefore={prefixSelector} style={{ width: '100%' }} placeholder={lang.contactMobileNumber} />
+                            <Input type="number" name="user_phone" addonBefore={prefixSelector} style={{ width: '100%' }} placeholder={lang.contactMobileNumber} onChange={phoneNumber} />
                         </Form.Item>
-                        <Form.Item name="message" rules={[{required: true, message: lang.errorMessage}]}>
-                            <Input.TextArea name="message" placeholder={lang.contactMessage}/>
+                        <Form.Item name="message" rules={[{ required: true, message: lang.errorMessage }]}>
+                            <Input.TextArea name="message" placeholder={lang.contactMessage} />
                         </Form.Item>
                         <Form.Item>
-                            <Button type="primary" htmlType="submit" onSubmit={(e)=>console.log(e.target)}>
+                            <Button type="primary" htmlType="submit"  onSubmit={(e) => console.log(e.target)}>
                                 Submit
                             </Button>
                         </Form.Item>
                     </Form>
+                    {/* {contextHolder} */}
                 </div>
+                {contextHolder}
             </div >
         })
         // </section>
