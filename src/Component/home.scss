@@ -44,3 +44,21 @@ main {
         }
     }
 }
+@media only screen and (max-width: 1024px) {
+    main{
+        section{
+            .sectionName{
+                font-size: calc(5vw - 4px);
+            }
+        }
+    }
+}
+@media only screen and (max-width: 465px) {
+    main{
+        section{
+            .sectionName{
+                font-size: calc(8vw - 4px);
+            }
+        }
+    }
+}

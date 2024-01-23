@@ -60,7 +60,7 @@ export default function Team({ selectLanguage, language }) {
         <div className="teamCont">
             <div>
                 {selectLanguage[language].map((elem, index)=>{
-                    return <h2 key={index}>{elem.ourClients}</h2>
+                    return <h2 key={index} className="sectionName">{elem.ourClients}</h2>
                 })}
             </div>
             {/* {teamArr.map((elem, index) => {
