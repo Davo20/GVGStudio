@@ -18,11 +18,10 @@
         margin-bottom: 60px;
 
         div {
-
             h2 {
                 color: white;
                 margin-block-end: 0;
-                font-size: 50px;
+                text-transform: uppercase;
             }
 
             div {
@@ -181,6 +180,24 @@
                 margin: 0 auto;
                 border-top: 1px solid #4B4B73;
                 line-height: 60px;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1024px){
+    .serviceHeader{
+        div{
+            h2{
+                font-size: 50px; 
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1024px){
+    .serviceHeader{
+        div{
+            h2{
+                font-size: clamp(1rem, 7vw, 2rem); 
             }
         }
     }

@@ -27,7 +27,7 @@ $color: #4B4B73;
             h2 {
                 color: white;
                 margin-block-end: 0;
-                font-size: 50px;
+                text-transform: uppercase;
             }
 
             div {
@@ -185,6 +185,11 @@ $color: #4B4B73;
 }
 
 @media only screen and (min-width: 1024px) {
+    .portfolioHeader{
+        h2{
+            font-size: 50px; 
+        }
+    }
     .portfolioCont {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -203,6 +208,11 @@ $color: #4B4B73;
 
 // TABLETS SCREEN
 @media only screen and (max-width: 1024px) {
+    .portfolioHeader{
+        h2{
+            font-size: clamp(1rem, 10vw, 2rem); 
+        }
+    }
     .portfolioCont {
         display: grid;
         grid-template-columns: repeat(2, 1fr);

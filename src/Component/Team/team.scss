@@ -4,10 +4,10 @@ $titleColor: #4B4B73;
     // background-color: gainsboro;
     background-color: white;
 
-    h2 {
-        font-size: 40px;
-        text-transform: uppercase;
-    }
+    // h2 {
+    //     font-size: 40px;
+    //     text-transform: uppercase;
+    // }
 
     .teamHeader {
         background-image: url(../../img/clientsPic.png);
@@ -29,7 +29,7 @@ $titleColor: #4B4B73;
             h2 {
                 color: white;
                 margin-block-end: 0;
-                font-size: 50px;
+                text-transform: uppercase;
             }
 
             div {
@@ -116,12 +116,19 @@ $titleColor: #4B4B73;
         }
     }
 }
-@media only screen and (min-width: 860px) {
-    // .teamCont {
-    //     display: grid;
-    //     grid-template-columns: repeat(1, 1fr);
-    //     gap: 20px;
-    // }
+@media only screen and (min-width: 1024px) {
+    .teamHeader{
+        h2{
+            font-size: 50px; 
+        }
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .teamHeader{
+        h2{
+            font-size: clamp(1rem, 10vw, 2rem); 
+        }
+    }
 }
 // TABLETS SCREEN
 @media only screen and (min-width: 465px) {
