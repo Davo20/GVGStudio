@@ -68,7 +68,7 @@ export default function GVG() {
                 errorPhone: "Please input your phone number!",
                 errorPhoneTwo: "The phone number was entered incorrectly!",
                 errorMessage: "Please input!",
-                sendMessage: "Send",
+                sendMessage: "Send Message",
                 footerCall: "Call for questions"
             }
         ],

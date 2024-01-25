@@ -68,7 +68,7 @@ export default function Footer({ selectLanguage, language }) {
                     })}
                 </div>
                 <div className="location">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3049.151750201895!2d44.511220167955145!3d40.16117490033593!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406abc68e8b3401f%3A0x634a3436729deffc!2zMDAwNSwgNDIg1Y_Vq9Wj1oDVodW2INWE1aXVrtWrINW61bjVstW41b_VoSwg1LXWgNaH1aHVtiAwMDA1!5e0!3m2!1shy!2sam!4v1704480726028!5m2!1shy!2sam" style={{ width: "600", height: "450", border: 0 }} loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3049.182240839478!2d44.50991827941019!3d40.16049597850627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406abc68e8b3401f%3A0x829c4626b7269b1!2zNDIg1Y_Vq9Wj1oDVodW2INWE1aXVrtWrINW61bjVstW41b_VoSwg1LXWgNaH1aHVtiAwMDA1!5e0!3m2!1shy!2sam!4v1706200887520!5m2!1shy!2sam" style={{ width: "600", height: "450", border: 0 }} loading="lazy"></iframe>
                 </div>
             </div>
         </footer>

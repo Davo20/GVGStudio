@@ -175,7 +175,7 @@ export default function HomeContact({ selectLanguage, language }) {
                         </Form.Item>
                         <Form.Item>
                             <Button type="primary" htmlType="submit" onSubmit={(e) => console.log(e.target)} >
-                                Submit
+                                {lang.sendMessage}
                             </Button>
                         </Form.Item>
                     </Form>
