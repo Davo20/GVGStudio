@@ -6,9 +6,6 @@ import { FaFacebook, FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import { Outlet, Link } from "react-router-dom";
 import { StyleProvider } from '@ant-design/cssinjs';
 import { ExclamationCircleFilled } from '@ant-design/icons';
-import 'antd-country-phone-input/dist/index.css';
-import 'react-phone-number-input/style.css'
-import PhoneInput from 'react-phone-number-input'
 import phoneNumberCode from "./phoneNumberCode.json"
 import { Input, InputNumber, AutoComplete, Button, Form, Select, message, ConfigProvider, Space, App, notification } from 'antd';
 import Aos from "aos";
