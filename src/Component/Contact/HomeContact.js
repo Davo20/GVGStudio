@@ -10,7 +10,6 @@ import 'antd-country-phone-input/dist/index.css';
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 import phoneNumberCode from "./phoneNumberCode.json"
-// import { PhoneInput, PhoneInputFormItem} from '@validate-phone/antd-input'
 import { Input, InputNumber, AutoComplete, Button, Form, Select, message, ConfigProvider, Space, App, notification } from 'antd';
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -55,15 +54,7 @@ export default function HomeContact({ selectLanguage, language }) {
         message.success(succesMessage[language].text)
         console.log("jj")
     };
-    const validateMobileNumber = (rule, value, callback) => {
-        // const{ form } = this.props;
-        // let mnumber = form.getFieldValue('phone');
-        // console.log("this is a mobil validator",mnumber);
-        if (value == 10) {
-            console.log("invalid mobile nuumber");
-        }
-
-    }
+    
     console.log(form)
     const prefixSelector = (
         <Form.Item name="prefix" noStyle>
@@ -203,7 +194,7 @@ const reg = /^(\+[1-9]{1}[0-9]{3,14})?([0-9]{9,14})$/
                         </Form.Item>
                         <Form.Item
                             name="user_phone"
-                            validateTrigger={handleValidateFieldNames('contactNumber')}
+                            
                             rules={[{ required: true, message: lang.errorPhone },
                                 { pattern: /^\s*(?:\+?(\d{1,3}))?([-. (]*(\d{3})[-. )]*)?((\d{3})[-. ]*(\d{2,4})(?:[-.x ]*(\d+))?)\s*$/,   message: lang.errorPhoneTwo, }
                            ]}
