@@ -1,6 +1,4 @@
 import React from "react";
-import { BsTelephone } from "react-icons/bs";
-import { MdOutlineEmail } from "react-icons/md";
 import HomeContact from "./HomeContact";
 import Footer from "../Footer/Footer";
 import { Outlet, Link } from "react-router-dom";

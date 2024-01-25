@@ -63,7 +63,6 @@
 
         .addres {
             background-color: white;
-            // max-height: 335px;
             max-height: 388px;
 
             .addresCont {
@@ -157,16 +156,6 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                // .ant-form-item.css-dev-only-do-not-override-zl9ks2 {
-
-
-                //     .ant-col.ant-col-16.ant-form-item-control.css-dev-only-do-not-override-zl9ks2 {
-                //         width: 100%;
-                //         max-width: 100%;
-                        
-                //     }
-
-                // }
                 input,
                 textarea {
                     display: block;
@@ -221,9 +210,6 @@
                 }
 
             }
-            // .ant-form-item.css-dev-only-do-not-override-zl9ks2 {
-                
-            // }
         }
     }
 }

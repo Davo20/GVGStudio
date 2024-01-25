@@ -5,41 +5,8 @@ import { PiSealCheckBold } from "react-icons/pi";
 import "./about.scss";
 
 export default function HomeAbout({ selectLanguage, language }) {
-    // const aboutData = [
-    //     {
-    //         icon: <PiSealCheckBold></PiSealCheckBold>,
-    //         text: "Հայաստանում ֆոտո/վիդեո նկարահանման ոլորտում փորձառուներից է, քանի որ այն շուկայում գործում է 2010 թվականից:"
-
-    //     },
-    //     {
-    //         icon: <PiSealCheckBold></PiSealCheckBold>,
-    //         text: "Շուկայում 13 տարիների ընթացքում գրանցել է իր գործունեության ծավալների և հավատարիմ հաճախորդների կայուն աճ:"
-
-    //     },
-    //     {
-    //         icon: <PiSealCheckBold></PiSealCheckBold>,
-    //         text: "Թողարկել է տարբեր նախագծեր, ավելի քան 30 կարճամետրաժ ֆիլմ (մինչև 15 րոպե և ավելի):"
-
-    //     },
-    //     {
-    //         icon: <PiSealCheckBold></PiSealCheckBold>,
-    //         text: "Ապահովում է նյութերի կատարյալ գաղտնիություն և ապահով արխիվացման համակարգ:"
-
-    //     },
-    //     {
-    //         icon: <PiSealCheckBold></PiSealCheckBold>,
-    //         text: "Ապահովում է միայն արտադրանքի բարձր որակ:"
-
-    //     }
-    // ]
 
     return (
-        // <section className="aboutUs">
-        //     <div className="aboutHeader">
-        //         {selectLanguage[language].map((lang) => {
-        //             return <h2>{lang.aboutUs}</h2>
-        //         })}
-        //     </div>
         <div className="aboutCont">
             <div className="aboutUsCont">
                 <div data-aos="fade-up" className="aboutPic">
@@ -56,11 +23,11 @@ export default function HomeAbout({ selectLanguage, language }) {
             </div>
             <div className="aboutUsData">
             {selectLanguage[language].map((elem, index)=>{
-                    return <h2>{elem.aboutUsData}</h2>
+                    return <h2 key={index}>{elem.aboutUsData}</h2>
                 })}
                 <div className="aboutUsDataCont">
                     {aboutData[language].map((elem, index) => {
-                        return <div className="aboutUsDataCard">
+                        return <div key={index} className="aboutUsDataCard">
                             <div>
                                 <PiSealCheckBold></PiSealCheckBold>
                             </div>
@@ -72,6 +39,5 @@ export default function HomeAbout({ selectLanguage, language }) {
                 </div>
             </div>
         </div>
-        // </section>
     )
 }

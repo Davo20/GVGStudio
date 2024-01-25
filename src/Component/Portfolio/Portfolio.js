@@ -5,8 +5,6 @@ import { Outlet, Link } from "react-router-dom";
 import "./portfolio.scss";
 
 export default function Portfolio({ selectLanguage, language }) {
-    // const [array, setArr] = useState([...new Array(9).fill(9)])
-    // console.log(array)
     return (
         <div>
             <section className="portfolio" style={{ paddingBottom: 60 }}>

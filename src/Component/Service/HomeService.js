@@ -29,7 +29,6 @@ export default function HomeService({ selectLanguage, language }) {
         }
     };
     return (
-            // <h2 data-aos="zoom-out">Services</h2>
             <div className="serviceCont">
                 
                 {selectLanguage[language].map((lang, index) => {

@@ -1,8 +1,6 @@
 import React, { useRef } from "react";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-// import pic from "../../img/headerPic.jpg";
-import pic from "../../img/image.jpg";
 import "./header.scss"
 
 export default function Header({ selectLanguage, language }) {
@@ -26,7 +24,6 @@ export default function Header({ selectLanguage, language }) {
     return (
         <header>
 
-            {/* <img src={pic}></img> */}
             {selectLanguage[language].map((lang) => {
 
                 return <Carousel key={Math.random()} responsive={responsive}
@@ -36,7 +33,6 @@ export default function Header({ selectLanguage, language }) {
                     containerClass="carousel-container"
                     ssr={true} // means to render carousel on server-side.
                     infinite={true}
-                    // autoPlay={this.props.deviceType !== "mobile" ? true : false}
                     autoPlaySpeed={5000}
                     autoPlay={true}
                     focusOnSelect={true}
@@ -48,7 +44,7 @@ export default function Header({ selectLanguage, language }) {
                         <div>
                             <h2 data-aos="zoom-out" data-aos-duration="1000">{lang.videoGraphic}</h2>
                             <h3 data-aos="zoom-out" data-aos-duration="1200">{lang.expert}</h3>
-                            <p  data-aos="zoom-out" data-aos-duration="1400">{lang.headinng}</p>
+                            <p data-aos="zoom-out" data-aos-duration="1400">{lang.headinng}</p>
                         </div>
                     </div>
                     <div className="headerContTwo">
@@ -59,13 +55,6 @@ export default function Header({ selectLanguage, language }) {
                         </div>
                     </div>
                 </Carousel>
-
-                // return <div>
-
-                //     <h2>VIDEO GRAPHIC</h2>
-                //     <h3>{lang.expert}</h3>
-                //     <p>{lang.headinng}</p>
-                // </div>
             })}
 
         </header>

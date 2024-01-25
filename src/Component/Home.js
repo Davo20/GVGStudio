@@ -24,9 +24,6 @@ import shotingVideos from "../img/shotingVideos.jpg";
 import startup from "../img/startup.jpeg";
 import website from "../img/website.jpg";
 import end from "../img/end.jpg"
-// import { useScroll, animated } from '@react-spring/web'
-
-
 
 export default function Home({ selectLanguage, language }) {
     useEffect(() => {
@@ -74,12 +71,8 @@ export default function Home({ selectLanguage, language }) {
                             draggable={false}
                             showDots={true}
                             containerClass="carousel-container"
-                            // centerMode={true}
-                            // renderDotsOutside={true}
-                            // deviceType={deviceType}
                             ssr={true} // means to render carousel on server-side.
                             infinite={true}
-                            // autoPlay={this.props.deviceType !== "mobile" ? true : false}
                             autoPlaySpeed={5000}
                             autoPlay={true}
                             focusOnSelect={true}

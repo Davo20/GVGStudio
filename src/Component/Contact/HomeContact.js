@@ -1,4 +1,4 @@
-import React, { useRef, useState, useLayoutEffect, useContext } from "react";
+import React, { useRef, useState, useLayoutEffect, useContext, useEffect } from "react";
 import emailjs from '@emailjs/browser';
 import { BsTelephone } from "react-icons/bs";
 import { MdOutlineEmail } from "react-icons/md";
@@ -32,7 +32,6 @@ export default function HomeContact({ selectLanguage, language }) {
         if (isFieldName) return 'onChange';
         return 'onBlur';
     };
-
     useLayoutEffect(() => {
         ConfigProvider.config({
             holderRender: (children) => (
@@ -49,28 +48,16 @@ export default function HomeContact({ selectLanguage, language }) {
 
     const success = () => {
         message.success(succesMessage[language].text)
-        console.log("jj")
     };
-    
-    console.log(form)
-    const prefixSelector = (
-        <Form.Item name="prefix" noStyle>
 
-             <Select name="user_prefix" style={{ width: 80 }}  >
-        {phoneNumberCode.map((elem)=>{
-                return <Option value={elem.dial_code}>{elem.dial_code}</Option>
-                {/* <Option value="7">+7</Option> */}
-            })}
-            </Select>
-        </Form.Item>
-    );
+    
+
     const emailValid = /^[a-zA-Z0-9._]+@[a-z]+\.[a-z]{2,6}$/
     const nameValid = /^[A-Za-z]+$/
-    // const phoneValid = /^-?(0|[1-9][0-9]*)(\.[0-9]*)?$/
-    const phoneValid =/^\s*(?:\+?(\d{1,3}))?([-. (]*(\d{3})[-. )]*)?((\d{3})[-. ]*(\d{2,4})(?:[-.x ]*(\d+))?)\s*$/
+    const phoneValid = /^\s*(?:\+?(\d{1,3}))?([-. (]*(\d{3})[-. )]*)?((\d{3})[-. ]*(\d{2,4})(?:[-.x ]*(\d+))?)\s*$/
     const sendEmail = (e) => {
         e.preventDefault();
-        if (e.target[0].value != "" && nameValid.test(e.target.value) && e.target[1].value != "" && emailValid.test(e.target[1].value) && e.target[2].value != "" && phoneValid.test(e.target[2].value) && e.target[3].value != "") {
+        if (e.target[0].value != "" && nameValid.test(e.target[0].value) && e.target[1].value != "" && emailValid.test(e.target[1].value) && e.target[2].value != "" && phoneValid.test(e.target[2].value) && e.target[3].value != "") {
 
             // emailjs.sendForm("service_xu7xj59", "template_lasyknu", e.currentTarget, "yRQYJNN-RsW3Wa8JW")
             //     .then((result) => {
@@ -80,19 +67,10 @@ export default function HomeContact({ selectLanguage, language }) {
             //     });
             success()
         }
-        console.log(e.target[0].value)
-        console.log(e.target[1].value)
-        console.log(e.target[2].value)
-        console.log(e.target[3].value)
-
-
-
-
-
     };
 
 
-const reg = /^(\+[1-9]{1}[0-9]{3,14})?([0-9]{9,14})$/
+    const reg = /^(\+[1-9]{1}[0-9]{3,14})?([0-9]{9,14})$/
 
     return (
         selectLanguage[language].map((lang, index) => {
@@ -157,20 +135,12 @@ const reg = /^(\+[1-9]{1}[0-9]{3,14})?([0-9]{9,14})$/
                     </div>
                 </div>
                 <div className="message" data-aos="fade-down">
-                    {/* <form action="#" ref={form} onSubmit={sendEmail} >
-                        <input type="text" name="user_name" required placeholder={lang.contactName}></input>
-                        <input type="email" name="user_email" required placeholder={lang.contactEmail} onChange={hh}></input>
-                        <input type="tel" name="phone" required placeholder={lang.contactMobileNumber}></input>
-                        <textarea name="message" placeholder={lang.contactMessage}></textarea>
-                        <button type="submit">{lang.sendMessage}</button>
-                    </form> */}
                     <Form form={form} onSubmitCapture={sendEmail}>
-
                         <Form.Item
                             name="user_name"
                             tooltip="What do you want others to call you?"
                             rules={[{ required: true, message: lang.errorName, whitespace: true },
-                            {pattern: /^[A-Za-z]+$/, match: true, message: lang.errorNameTwo}]}
+                            { pattern: /^[A-Za-z]+$/, match: true, message: lang.errorNameTwo }]}
                         >
                             <Input name="user_name" placeholder={lang.contactName} />
                         </Form.Item>
@@ -191,14 +161,14 @@ const reg = /^(\+[1-9]{1}[0-9]{3,14})?([0-9]{9,14})$/
                         </Form.Item>
                         <Form.Item
                             name="user_phone"
-                            
+
                             rules={[{ required: true, message: lang.errorPhone },
-                                { pattern: /^\s*(?:\+?(\d{1,3}))?([-. (]*(\d{3})[-. )]*)?((\d{3})[-. ]*(\d{2,4})(?:[-.x ]*(\d+))?)\s*$/,   message: lang.errorPhoneTwo, }
-                           ]}
+                            { pattern: /^\s*(?:\+?(\d{1,3}))?([-. (]*(\d{3})[-. )]*)?((\d{3})[-. ]*(\d{2,4})(?:[-.x ]*(\d+))?)\s*$/, message: lang.errorPhoneTwo }
+                            ]}
 
                         >
-                            
-                            <Input name="user_phone" style={{ width: '100%' }} placeholder={lang.contactMobileNumber} />
+
+                            <Input  name="user_phone" style={{ width: '100%' }} placeholder={lang.contactMobileNumber} />
                         </Form.Item>
                         <Form.Item name="message" rules={[{ required: true, message: lang.errorMessage }]}>
                             <Input.TextArea name="message" placeholder={lang.contactMessage} />
@@ -209,16 +179,11 @@ const reg = /^(\+[1-9]{1}[0-9]{3,14})?([0-9]{9,14})$/
                             </Button>
                         </Form.Item>
                     </Form>
-                    {/* {contextHolder} */}
                 </div>
                 {contextHolder}
 
             </div >
 
         })
-        // </section>
-
     )
 }
-// { pattern: /^-?(0|[1-9][0-9]*)(\.[0-9]*)?$/, message: 'Name can only include letters and numbers.', }
-// /^\s*(?:\+?(\d{1,3}))?([-. (]*(\d{3})[-. )]*)?((\d{3})[-. ]*(\d{2,4})(?:[-.x ]*(\d+))?)\s*$/

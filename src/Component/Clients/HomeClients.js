@@ -1,7 +1,6 @@
 import React from "react";
 import "./clients.scss";
 import teamPic from "../../img/2.jpg"
-import sas from "../../img/sas-logo.png";
 import collaboratorData from "./collaboratorData.json"
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
@@ -59,26 +58,10 @@ export default function HomeClients({ selectLanguage, language }) {
     return (
         <div className="teamCont">
             <div>
-                {selectLanguage[language].map((elem, index)=>{
+                {selectLanguage[language].map((elem, index) => {
                     return <h2 key={index} className="sectionName">{elem.ourClients}</h2>
                 })}
             </div>
-            {/* {teamArr.map((elem, index) => {
-                return <div data-aos="zoom-out-up" data-aos-delay={elem.dataAosDelay} className="card" key={index} >
-                    <div className="animationCard">
-                        <div className="pic">
-                            <img src={elem.img}></img>
-                        </div>
-                        <div className="cardInfo">
-                            <h3>{elem.name}</h3>
-                            <span>{elem.profession}</span>
-                            <div className="fullInfo">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            })} */}
             <Carousel className="slider" responsive={responsive}
                 swipeable={false}
                 draggable={false}
@@ -86,7 +69,6 @@ export default function HomeClients({ selectLanguage, language }) {
                 containerClass="carousel-container"
                 ssr={true} // means to render carousel on server-side.
                 infinite={true}
-                // autoPlay={this.props.deviceType !== "mobile" ? true : false}
                 autoPlaySpeed={5000}
                 autoPlay={true}
                 focusOnSelect={true}

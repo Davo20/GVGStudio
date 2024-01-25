@@ -2,14 +2,6 @@ import React, { useState } from "react";
 import "./services.scss";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import imigayin from "../../img/imigayin.jpg";
-import informative from "../../img/informative.jpg";
-import playful from "../../img/playful.jpg";
-import animated from "../../img/animated.jpg";
-import shotingVideos from "../../img/shotingVideos.jpg";
-import startup from "../../img/startup.jpeg";
-import website from "../../img/website.jpg";
-import end from "../../img/end.jpg"
 import HomeService from "./HomeService";
 import Footer from "../Footer/Footer";
 import { FaVideo, FaCamera } from "react-icons/fa";
@@ -37,43 +29,6 @@ export default function Services({ selectLanguage, language }) {
         }
     };
 
-
-    const servicesArr = [
-        {
-            servicePic: imigayin,
-            service: "imigayin"
-        },
-        {
-            servicePic: informative,
-            service: "iinformative",
-        },
-        {
-            servicePic: playful,
-            service: "Playful",
-        },
-        {
-            servicePic: animated,
-            service: "Animated-2D, 3D",
-        },
-        {
-            servicePic: shotingVideos,
-            service: "Shooting and making videos",
-        },
-        {
-            servicePic: startup,
-            service: "Visualization of startups",
-        },
-        {
-            servicePic: website,
-            service: "Preparation of websites",
-        },
-        {
-            servicePic: end,
-            service: "Corporate events, concerts, programs, film shooting and making",
-        }
-
-    ]
-    // setServiceArr(servicesArr)
 
     return (
         <div>
@@ -119,30 +74,6 @@ export default function Services({ selectLanguage, language }) {
                         </div>
                     </div>
                     })}
-                    {/* <div className="serviceCategoryCard">
-                        <div className="cardHeader">
-                            <FaVideo />
-                            <h3>Video recording</h3>
-                        </div>
-                        <div className="cardSection">
-                            <h3>5 minute video to half a day</h3>
-                            <div>
-                                <ul>
-                                    <li>
-                                        <MdOutlineCheckCircleOutline></MdOutlineCheckCircleOutline>
-                                        <p>2 videographers</p>
-                                    </li>
-                                    <li>
-                                        <MdOutlineCheckCircleOutline></MdOutlineCheckCircleOutline>
-                                        <p>Assembler</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="cardPrice">
-                            <span>250000AMD</span>
-                        </div>
-                    </div> */}
                 </div>
 
             </section>

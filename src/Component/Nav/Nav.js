@@ -1,16 +1,11 @@
 import React, { useState, useRef } from "react";
 import Burger from "./Burger"
-import { FaPlay } from "react-icons/fa";
-import { CiPlay1 } from "react-icons/ci";
-import { BsPlayFill, BsPlay } from "react-icons/bs";
 import { FiMenu } from "react-icons/fi";
 import { MdOutlineClose } from "react-icons/md";
-// import logo from "../../img/logo4.png";
 import { Outlet, Link } from "react-router-dom";
 import { Select } from 'antd';
 import logo from "../../img/logo++.png"
 import "./nav.scss";
-// import { useState } from "react";
 
 export default function Nav({ languageClick, language, selectLanguage }) {
     const [navSticky, setNavStiky] = useState(false)
@@ -58,11 +53,6 @@ export default function Nav({ languageClick, language, selectLanguage }) {
                             </Link>
                             <li>
                                 <div className="selectLanguage">
-                                    {/* <select value={language} onChange={languageClick} autoFocus>
-                                        <option value="English">EN</option>
-                                        <option value="Armenian">AM</option>
-                                        <option value="Russian">RU</option>
-                                    </select> */}
                                     <Select
                                         // labelInValue
                                         value={{ value: language}}
@@ -91,7 +81,6 @@ export default function Nav({ languageClick, language, selectLanguage }) {
                     })}
                 </div>
                 
-                    {/* <FiMenu className="burgerOpen" onClick={() => setMenuBurger(true)}></FiMenu> */}
                     {menuBurger ? <MdOutlineClose className="burgerFalse" onClick={() => setMenuBurger(false)}></MdOutlineClose> : <FiMenu className="burgerOpen" onClick={() => setMenuBurger(true)}></FiMenu>}
                     <Burger navSticky={navSticky} menuBurger={menuBurger} languageClick={languageClick} language={language} selectLanguage={selectLanguage} setMenuBurger={setMenuBurger}></Burger>
                 

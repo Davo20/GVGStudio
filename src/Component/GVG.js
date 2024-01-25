@@ -15,16 +15,10 @@ if(!localStorage.getItem("langg")){
     localStorage.setItem("langg", JSON.stringify("Armenian"))
 }
 export default function GVG() {
-    const [languagee, setLanguage] = useState("Armenian")
     let vv = JSON.parse(localStorage.getItem("langg"))
-    // let vv = localStorage.getItem("langg")
     const [language, setLanguagee] = useState(vv)
     const [arrowFadeUp, setArrowUp] = useState(false)
 
-    // localStorage.setItem("langg", JSON.stringify(languagee))
-    // useEffect(()=>{
-
-    // },[languagee])
     localStorage.setItem("langg", JSON.stringify(language))
     const languageClick = (value) => {
         setLanguagee(value) // { value: "lucy", key: "lucy", label: "Lucy (101)" }

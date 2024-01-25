@@ -1,11 +1,8 @@
 import "./portfolio.scss";
 import React, { useState, useEffect, useRef } from "react";
 import { CiPlay1 } from "react-icons/ci";
-import { AiOutlineClose } from "react-icons/ai";
 import portfolioData from "./portfolio.json";
 import portfolioButton from "./portfolioButton.json"
-import { Parallax } from 'react-scroll-parallax';
-import ReactPlayer from 'react-player'
 
 
 export default function HomePortfolio({ selectLanguage, language }) {
@@ -16,9 +13,9 @@ export default function HomePortfolio({ selectLanguage, language }) {
     const [filterPortfolio, setFilterPortfolio] = useState([...portfolioData])
     const video = useRef(null)
     let watchMoreButton = {
-        English: {watchMore: "Watch More"},
-        Armenian: {watchMore: "Դիտել ավելին"},
-        Russian: {watchMore: "Посмотреть больше"}
+        English: { watchMore: "Watch More" },
+        Armenian: { watchMore: "Դիտել ավելին" },
+        Russian: { watchMore: "Посмотреть больше" }
     }
     const watchVideoClick = (e) => {
         portfolioData.map((elem) => {
@@ -32,10 +29,10 @@ export default function HomePortfolio({ selectLanguage, language }) {
         setReadMore((value) => value + 3)
     }
 
-    const filterProduct = (value)=>{
-        const filter = portfolioData.filter((valuee)=> valuee.formatEng === value || valuee.formatArm === value || valuee.formatRu === value || valuee.formatTwoEng === value || valuee.formatTwoArm === value || valuee.formatTwoRu === value)
+    const filterProduct = (value) => {
+        const filter = portfolioData.filter((valuee) => valuee.formatEng === value || valuee.formatArm === value || valuee.formatRu === value || valuee.formatTwoEng === value || valuee.formatTwoArm === value || valuee.formatTwoRu === value)
         setFilterPortfolio([...filter])
-        if(value === "All" || value === "Բոլորը" || value === "Все"){
+        if (value === "All" || value === "Բոլորը" || value === "Все") {
             setFilterPortfolio([...portfolioData])
         }
         if (allProduct.includes(value)) {
@@ -49,14 +46,14 @@ export default function HomePortfolio({ selectLanguage, language }) {
     useEffect(() => {
         document.addEventListener("mousedown", handleOutsideClick);
         return () => {
-          document.removeEventListener("mousedown", handleOutsideClick);
+            document.removeEventListener("mousedown", handleOutsideClick);
         };
-      }, []);
-      const handleOutsideClick = (e) => {
+    }, []);
+    const handleOutsideClick = (e) => {
         if (video.current && video.current.contains(e.target)) {
-           setVideoOpen(false);
+            setVideoOpen(false);
         }
-      };
+    };
 
     return (
         <div className="abouCont">
@@ -72,9 +69,6 @@ export default function HomePortfolio({ selectLanguage, language }) {
 
                 {filterPortfolio.slice(0, readMore).map((elem, index) => {
                     return <div key={index} className="videoCont" id={elem.id} >
-                        {/* <video controls>
-                             <source src={elem.video} type="video/mp4"></source>
-                        </video> */}
                         <img src={elem.img}></img>
                         <div className="opacityBackground"></div>
                         <div className="watchVideo" id={elem.id} onClick={watchVideoClick}>
@@ -84,12 +78,11 @@ export default function HomePortfolio({ selectLanguage, language }) {
                 })}
             </div>
             {videoOpen && <div ref={video} className="videoOpen">
-                <iframe allow="fullscreen;autoplay" width="640" height="360"  src={d}></iframe>
-                {/* <ReactPlayer url='https://drive.google.com/file/d/1yoC3h41DPHwkZSTrrwoPqGUiB8EWjcZi/view?usp=sharing' /> */}
+                <iframe allow="fullscreen;autoplay" width="640" height="360" src={d}></iframe>
             </div>}
-            
+
             {readMore < filterPortfolio.length ? <button onClick={readMoreClick} className="loadMore">{watchMoreButton[language].watchMore}</button> : null}
         </div>
-        
+
     )
 }

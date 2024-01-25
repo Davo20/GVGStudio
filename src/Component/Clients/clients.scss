@@ -1,29 +1,21 @@
 $titleColor: #4B4B73;
+
 .team {
     width: 100%;
-    // background-color: gainsboro;
     background-color: white;
-
-    // h2 {
-    //     font-size: 40px;
-    //     text-transform: uppercase;
-    // }
 
     .teamHeader {
         background-image: url(../../img/clientsPic.png);
         background-repeat: no-repeat;
         background-origin: content-box;
-        // background-attachment: fixed;
         background-size: 100%;
         background-size: cover;
-        
-        // width: 100%;
-        // height: 80vh;
         display: flex;
         align-items: center;
         justify-content: center;
         position: relative;
         margin-bottom: 60px;
+
         div {
 
             h2 {
@@ -37,10 +29,12 @@ $titleColor: #4B4B73;
                 margin: 0 auto;
                 display: flex;
                 justify-content: space-around;
+
                 a {
                     text-decoration: none;
                     color: gray;
-                    &:hover{
+
+                    &:hover {
                         color: white;
                     }
                 }
@@ -56,22 +50,27 @@ $titleColor: #4B4B73;
     .teamCont {
         width: 90%;
         margin: 0 auto;
+
         .react-multi-carousel-dot-list {
             display: none;
         }
-        .slider{
+
+        .slider {
             margin: 0 auto;
         }
-        h2{
+
+        h2 {
             color: $titleColor;
         }
-        .logoCollaborator{
+
+        .logoCollaborator {
             height: 200px;
             background-color: white;
             display: flex;
             justify-content: center;
             align-items: center;
-            img{
+
+            img {
                 width: 50%;
                 height: auto;
                 max-height: 50%;
@@ -101,6 +100,7 @@ $titleColor: #4B4B73;
                     bottom: 0;
                     overflow: hidden;
                     cursor: pointer;
+
                     .fullInfo {
                         width: 90%;
                         margin: 0 auto;
@@ -116,39 +116,33 @@ $titleColor: #4B4B73;
         }
     }
 }
+
 @media only screen and (min-width: 1024px) {
-    .teamHeader{
-        h2{
-            font-size: 50px; 
+    .teamHeader {
+        h2 {
+            font-size: 50px;
         }
     }
 }
+
 @media only screen and (max-width: 1024px) {
-    .teamHeader{
-        h2{
-            font-size: clamp(1rem, 10vw, 2rem); 
+    .teamHeader {
+        h2 {
+            font-size: clamp(1rem, 10vw, 2rem);
         }
     }
 }
+
 // TABLETS SCREEN
 @media only screen and (min-width: 465px) {
-    // .teamCont {
-    //     display: grid;
-    //     grid-template-columns: repeat(2, 1fr);
-    //     gap: 20px;
-    // }
-    .teamHeader{
+    .teamHeader {
         height: 80vh;
     }
 }
+
 // MOBILE SCREEN
 @media only screen and (max-width: 465px) {
-    .teamHeader{
+    .teamHeader {
         height: 70vh;
     }
-    // .teamCont {
-    //     display: grid;
-    //     grid-template-columns: repeat(1, 1fr);
-    //     gap: 20px;
-    // }
 }

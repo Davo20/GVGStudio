@@ -2,11 +2,9 @@ header {
     width: 100%;
     height: 100vh;
 
-    // padding-bottom: 60px;
     .headerCont,
     .headerContTwo {
         background: url(../../img/backgroundHeader.jpg);
-        // background-image: url(../../img/image.jpg);
         background-repeat: no-repeat;
         background-origin: content-box;
         background-position: center;
@@ -14,7 +12,6 @@ header {
         background-size: cover;
         background-clip: padding-box;
         background-attachment: fixed;
-        // width: 100%;
         height: 100vh;
         position: relative;
         display: flex;
@@ -34,7 +31,6 @@ header {
 
             h2 {
                 color: white;
-                // font-size: 6vw;
                 margin-block-end: 0;
             }
 
@@ -53,7 +49,6 @@ header {
     }
 
     .headerContTwo {
-        // background-image: url(../../img/website.jpg);
         background-image: url(../../img/image.jpg);
         color: white;
         filter: grayscale(50%) saturate(0%) sepia(0.6) hue-rotate(5deg) saturate(113%) brightness(54%);
@@ -69,12 +64,6 @@ header {
                 border-radius: 50%;
                 background-color: rgb(155, 153, 153);
                 border: none;
-
-                // &:hover {
-                //     background-color: rgb(41, 41, 176);
-                //     width: 32px;
-                //     border: none;
-                // }
             }
         }
 
@@ -87,8 +76,6 @@ header {
                 height: 13px;
                 padding: 1px 0;
                 border: none;
-                // padding: 5px;
-                // padding: 3px;
             }
         }
     }
@@ -121,11 +108,9 @@ header {
             position: absolute;
 
             h2 {
-                
                 color: white;
-                // font-size: calc(2vw + 2vh + 1vmin);
                 font-size: calc(8vw - 4px);
-                
+
             }
         }
     }

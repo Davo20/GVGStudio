@@ -3,9 +3,8 @@ import HomeClients from "./HomeClients";
 import Footer from "../Footer/Footer";
 import { Outlet, Link } from "react-router-dom";
 import "./clients.scss";
-import teamPic from "../../img/2.jpg"
 
-export default function Team({ selectLanguage, language }) {
+export default function Clients({ selectLanguage, language }) {
 
     return (
         <div>

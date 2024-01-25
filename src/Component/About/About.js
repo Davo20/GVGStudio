@@ -1,7 +1,6 @@
 import React from "react";
 import HomeAbout from "./HomeAbout";
 import Footer from "../Footer/Footer"
-import aboutPic from "../../img/about.jpg";
 import { Outlet, Link } from "react-router-dom";
 import "./about.scss";
 
