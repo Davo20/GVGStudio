@@ -63,7 +63,7 @@
 
         .addres {
             background-color: white;
-            max-height: 388px;
+            max-height: 500px;
 
             .addresCont {
                 width: 80%;
@@ -164,6 +164,21 @@
 
                 textarea {
                     height: 100px;
+                }
+                .ant-input.css-dev-only-do-not-override-zl9ks2.ant-input-outlined{
+                    border: 1px solid rgb(126, 124, 124);
+                    &:hover{
+                        border-color: #4096ff;
+                    }
+                    &:focus-within{
+                        border-color: #4096ff;
+                    }
+                }
+                .ant-input.css-dev-only-do-not-override-zl9ks2.ant-input-outlined.ant-input-status-error{
+                    border: 1px solid #ff4d4f;
+                }
+                .ant-input.css-dev-only-do-not-override-zl9ks2.ant-input-outlined.ant-input-status-success{
+                    border: 1px solid #4096ff;
                 }
 
                 button {

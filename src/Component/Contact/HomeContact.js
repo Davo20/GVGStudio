@@ -1,7 +1,7 @@
 import React, { useRef, useState, useLayoutEffect, useContext, useEffect } from "react";
 import emailjs from '@emailjs/browser';
 import { BsTelephone } from "react-icons/bs";
-import { MdOutlineEmail } from "react-icons/md";
+import { MdOutlineEmail, MdOutlineLocationOn } from "react-icons/md";
 import { FaFacebook, FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import { Outlet, Link } from "react-router-dom";
 import { StyleProvider } from '@ant-design/cssinjs';
@@ -76,6 +76,18 @@ export default function HomeContact({ selectLanguage, language }) {
         selectLanguage[language].map((lang, index) => {
             return <div className="contactCont" key={index}>
                 <div className="addres" data-aos="fade-up">
+                <div className="addresCont">
+                        <div>
+                            <MdOutlineLocationOn></MdOutlineLocationOn>
+                        </div>
+                        <ul>
+                            <li>
+                                <h2>{lang.ourLocation}</h2>
+                            </li>
+                            <li>{lang.ourLocationText}</li>
+                            <li>{lang.ourLocationTextTwo}</li>
+                        </ul>
+                    </div>
                     <div className="addresCont">
                         <div>
                             <BsTelephone></BsTelephone>
@@ -142,7 +154,7 @@ export default function HomeContact({ selectLanguage, language }) {
                             rules={[{ required: true, message: lang.errorName, whitespace: true },
                             { pattern: /^[A-Za-z]+$/, match: true, message: lang.errorNameTwo }]}
                         >
-                            <Input name="user_name" placeholder={lang.contactName} />
+                            <Input name="user_name" placeholder={lang.contactName}/>
                         </Form.Item>
                         <Form.Item
                             name="user_email"
