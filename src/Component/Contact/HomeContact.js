@@ -81,7 +81,7 @@ export default function HomeContact({ selectLanguage, language }) {
                             <MdOutlineLocationOn></MdOutlineLocationOn>
                         </div>
                         <ul>
-                            <li>
+                            <li className="titleContact">
                                 <h2>{lang.ourLocation}</h2>
                             </li>
                             <li>{lang.ourLocationText}</li>
@@ -93,7 +93,7 @@ export default function HomeContact({ selectLanguage, language }) {
                             <BsTelephone></BsTelephone>
                         </div>
                         <ul>
-                            <li>
+                            <li className="titleContact">
                                 <h2>{lang.mobileNumber}</h2>
                             </li>
                             <li>+374(91)-30-20-08</li>
@@ -105,7 +105,7 @@ export default function HomeContact({ selectLanguage, language }) {
                             <MdOutlineEmail></MdOutlineEmail>
                         </div>
                         <ul>
-                            <li>
+                            <li className="titleContact">
                                 <h2>{lang.emailAddres}</h2>
                             </li>
                             <li>gvg_studio@gmail.com</li>

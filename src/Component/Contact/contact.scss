@@ -1,3 +1,4 @@
+$titleColor: #4B4B73;
 .contact {
     width: 100%;
 
@@ -75,6 +76,7 @@
                 div {
                     svg {
                         font-size: 20px;
+                        color: $titleColor;;
                     }
                 }
 
@@ -91,6 +93,11 @@
                     li {
                         color: rgb(121, 118, 118);
                     }
+                    .titleContact{
+                        h2{
+                            color: $titleColor;
+                        }
+                    }
                 }
             }
 
@@ -101,6 +108,7 @@
                 h3 {
                     font-size: 20px;
                     text-align: left;
+                    color: $titleColor;;
                 }
 
                 ul {
@@ -118,7 +126,7 @@
                                 align-items: center;
                                 width: 40px;
                                 height: 40px;
-                                background-color: black;
+                                background-color: $titleColor;;
                                 border-radius: 50%;
                                 display: flex;
                                 justify-content: center;
