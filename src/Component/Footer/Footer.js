@@ -4,6 +4,11 @@ import { Outlet, Link } from "react-router-dom";
 import "./footer.scss";
 
 export default function Footer({ selectLanguage, language }) {
+    const footerEnd = {
+        English: {studio: "Studio"},
+        Armenian: {studio: "Ստուդիա"},
+        Russian: {studio: "Студия"}
+    }
     return (
         <footer>
             <div className="footerCont">
@@ -70,6 +75,9 @@ export default function Footer({ selectLanguage, language }) {
                 <div className="location">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3049.182240839478!2d44.50991827941019!3d40.16049597850627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406abc68e8b3401f%3A0x829c4626b7269b1!2zNDIg1Y_Vq9Wj1oDVodW2INWE1aXVrtWrINW61bjVstW41b_VoSwg1LXWgNaH1aHVtiAwMDA1!5e0!3m2!1shy!2sam!4v1706200887520!5m2!1shy!2sam" style={{ width: "600", height: "450", border: 0 }} loading="lazy"></iframe>
                 </div>
+            </div>
+            <div className="footerEnd">
+                <div>{`© GVG ${footerEnd[language].studio} 2024`}</div>
             </div>
         </footer>
     )

@@ -1,7 +1,7 @@
 footer {
     width: 100%;
     background-image: linear-gradient( 111.4deg,  rgba(7,7,9,1) 6.5%, rgba(27,24,113,1) 93.2% );
-    padding: 10px 0 10px 0;
+    padding: 10px 0 0 0;
 
     .footerCont {
         width: 95%;
@@ -98,6 +98,20 @@ footer {
                     }
                 }
             }
+        }
+    }
+    .footerEnd{
+        width: 100%;
+        height: 60px;
+        border-top: 1px solid gray;
+        div{
+            width: 90%;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            color: rgb(235, 226, 226);
+            font-size: 13px;
         }
     }
 }
