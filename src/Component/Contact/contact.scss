@@ -173,7 +173,8 @@ $titleColor: #4B4B73;
                 textarea {
                     height: 100px;
                 }
-                .ant-input.css-dev-only-do-not-override-zl9ks2.ant-input-outlined{
+                .ant-input.css-dev-only-do-not-override-zl9ks2.ant-input-outlined,
+                .ant-input.css-zl9ks2.ant-input-outlined{
                     border: 1px solid rgb(126, 124, 124);
                     &:hover{
                         border-color: #4096ff;
@@ -182,10 +183,12 @@ $titleColor: #4B4B73;
                         border-color: #4096ff;
                     }
                 }
-                .ant-input.css-dev-only-do-not-override-zl9ks2.ant-input-outlined.ant-input-status-error{
+                .ant-input.css-dev-only-do-not-override-zl9ks2.ant-input-outlined.ant-input-status-error,
+                .ant-input.css-zl9ks2.ant-input-outlined.ant-input-status-error{
                     border: 1px solid #ff4d4f;
                 }
-                .ant-input.css-dev-only-do-not-override-zl9ks2.ant-input-outlined.ant-input-status-success{
+                .ant-input.css-dev-only-do-not-override-zl9ks2.ant-input-outlined.ant-input-status-success,
+                .ant-input.css-zl9ks2.ant-input-outlined.ant-input-status-success{
                     border: 1px solid #4096ff;
                 }
 
