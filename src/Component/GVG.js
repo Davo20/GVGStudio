@@ -9,6 +9,8 @@ import Clients from "./Clients/Clients";
 import Contact from "./Contact/Contact";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { MdOutlineKeyboardArrowUp } from "react-icons/md";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import "./home.scss"
 
 if(!localStorage.getItem("langg")){
@@ -18,6 +20,10 @@ export default function GVG() {
     let vv = JSON.parse(localStorage.getItem("langg"))
     const [language, setLanguagee] = useState(vv)
     const [arrowFadeUp, setArrowUp] = useState(false)
+
+    useEffect(() => {
+        Aos.init()
+    }, [])
 
     localStorage.setItem("langg", JSON.stringify(language))
     const languageClick = (value) => {

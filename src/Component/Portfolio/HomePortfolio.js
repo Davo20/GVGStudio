@@ -68,7 +68,7 @@ export default function HomePortfolio({ selectLanguage, language }) {
             <div className="portfolioCont">
 
                 {filterPortfolio.slice(0, readMore).map((elem, index) => {
-                    return <div key={index} className="videoCont" id={elem.id} >
+                    return <div key={index} className="videoCont" id={elem.id} data-aos="zoom-in-up">
                         <img src={elem.img}></img>
                         <div className="opacityBackground"></div>
                         <div className="watchVideo" id={elem.id} onClick={watchVideoClick}>

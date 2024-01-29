@@ -8,8 +8,8 @@ import { StyleProvider } from '@ant-design/cssinjs';
 import { ExclamationCircleFilled } from '@ant-design/icons';
 import phoneNumberCode from "./phoneNumberCode.json"
 import { Input, InputNumber, AutoComplete, Button, Form, Select, message, ConfigProvider, Space, App, notification } from 'antd';
-import Aos from "aos";
-import "aos/dist/aos.css";
+// import Aos from "aos";
+// import "aos/dist/aos.css";
 import "./contact.scss";
 
 const { Option } = Select;
@@ -25,6 +25,9 @@ export default function HomeContact({ selectLanguage, language }) {
     const [messageApi, contextHolder] = message.useMessage();
     const { locale, theme } = useContext(ConfigProvider.ConfigContext);
 
+    // useEffect(() => {
+    //     Aos.init()
+    // }, [])
     const handleValidateFieldNames = (name) => {
         const isFieldName = validateFieldsName.find(
             (fieldName) => fieldName === name

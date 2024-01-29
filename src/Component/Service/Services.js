@@ -49,7 +49,7 @@ export default function Services({ selectLanguage, language }) {
                 <div className="serviceCategory">
                     {serviceCardData[language].map((elem, index)=>{
 
-                    return <div className="serviceCategoryCard">
+                    return <div key={index} className="serviceCategoryCard">
                         <div className="cardHeader">
                             <FaCamera />
                             <h3>{elem.cardTitle.toUpperCase()}</h3>
