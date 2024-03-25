@@ -62,12 +62,12 @@ export default function HomeContact({ selectLanguage, language }) {
         e.preventDefault();
         if (e.target[0].value != "" && nameValid.test(e.target[0].value) && e.target[1].value != "" && emailValid.test(e.target[1].value) && e.target[2].value != "" && phoneValid.test(e.target[2].value) && e.target[3].value != "") {
 
-            // emailjs.sendForm("service_xu7xj59", "template_lasyknu", e.currentTarget, "yRQYJNN-RsW3Wa8JW")
-            //     .then((result) => {
-            //         console.log(result.text);
-            //     }, (error) => {
-            //         console.log(error.text);
-            //     });
+            emailjs.sendForm("service_xu7xj59", "template_lasyknu", e.currentTarget, "yRQYJNN-RsW3Wa8JW")
+                .then((result) => {
+                    console.log(result.text);
+                }, (error) => {
+                    console.log(error.text);
+                });
             success()
         }
     };
