@@ -51,7 +51,7 @@ export default function GVG() {
                 contact: "Contact",
                 contactUs: "Contact Us",
                 contactAbout: "If you have any questions, please contact our support team",
-                imigayin: "Imigayin",
+                imigayin: "Image",
                 informative: "Informative",
                 playful: "Playful",
                 animated: "Animated-2D, 3D",

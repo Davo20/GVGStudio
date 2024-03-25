@@ -27,7 +27,10 @@ export default function Nav({ languageClick, language, selectLanguage }) {
             {/* <nav className={navSticky ? "scrollNavActive" : "navBar"}></nav> */}
             <div className="navCont">
                 <div className="logo">
+                    {/* <img src={logo}></img> */}
+                    <Link to="/">
                     <img src={logo}></img>
+                    </Link>
                 </div>
 
                 <div className="navBarMenu">
@@ -55,8 +58,8 @@ export default function Nav({ languageClick, language, selectLanguage }) {
                                 <div className="selectLanguage">
                                     <Select
                                         // labelInValue
-                                        value={{ value: language}}
-                                        defaultValue={{value: "Armenian"}}
+                                        value={{ value: language }}
+                                        defaultValue={{ value: "Armenian" }}
                                         style={{ width: 60, height: 20 }}
                                         listItemHeight={30}
                                         onChange={languageClick}
@@ -80,10 +83,10 @@ export default function Nav({ languageClick, language, selectLanguage }) {
                         </ul>
                     })}
                 </div>
-                
-                    {menuBurger ? <MdOutlineClose className="burgerFalse" onClick={() => setMenuBurger(false)}></MdOutlineClose> : <FiMenu className="burgerOpen" onClick={() => setMenuBurger(true)}></FiMenu>}
-                    <Burger navSticky={navSticky} menuBurger={menuBurger} languageClick={languageClick} language={language} selectLanguage={selectLanguage} setMenuBurger={setMenuBurger}></Burger>
-                
+
+                {menuBurger ? <MdOutlineClose className="burgerFalse" onClick={() => setMenuBurger(false)}></MdOutlineClose> : <FiMenu className="burgerOpen" onClick={() => setMenuBurger(true)}></FiMenu>}
+                <Burger navSticky={navSticky} menuBurger={menuBurger} languageClick={languageClick} language={language} selectLanguage={selectLanguage} setMenuBurger={setMenuBurger}></Burger>
+
             </div>
         </nav>
     )
